@@ -7,7 +7,6 @@ import Icon from './Icon';
 import Logo from '../public/Fin_E-fileLogo.png';
 import Image from 'next/image';
 import Link from 'next/link';
-import "bootstrap/dist/css/bootstrap.min.css";
 import {Grid} from "@mui/material";
 import Button from '@mui/material/Button';
 
