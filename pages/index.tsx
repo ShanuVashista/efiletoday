@@ -3,6 +3,7 @@ import {Accordion, AccordionDetails, AccordionSummary, Button, Grid, TextField, 
 import React from "react";
 import {Plus} from "react-feather";
 import HomeFooter from "../components/Footer/HomeFooter";
+import HomeHeader from "../components/HomeHeader";
 
 const Home: NextPage = () => {
     const fileData = [
@@ -84,6 +85,7 @@ const Home: NextPage = () => {
                     }
                 }
             >
+                <HomeHeader/>
                 <Grid item container direction="column" wrap="nowrap" xs={12} sm={6} md={5} className="p-5">
                     <Typography variant="h2" className="font-weight-bold text-white banner-title p-2" style={{textShadow: "0 1px 2px black"}}>
                         <span>File</span> IRS Form <br/> 2290 <span>Online</span>
