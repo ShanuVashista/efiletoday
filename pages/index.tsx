@@ -78,17 +78,17 @@ const Home: NextPage = () => {
                 className="banner-container p-5"
                 style={
                     {
-                        background: "url('/banner.jpg') no-repeat",
+                        background: "url('/banner.png') no-repeat",
                         backgroundSize: "cover",
-                        minHeight: 600
+                        minHeight: 900
                     }
                 }
             >
-                <Grid item container direction="column" wrap="nowrap" xs={12} sm={6} md={5} className="p-2">
+                <Grid item container direction="column" wrap="nowrap" xs={12} sm={6} md={5} className="p-5">
                     <Typography variant="h2" className="font-weight-bold text-white banner-title p-2" style={{textShadow: "0 1px 2px black"}}>
                         <span>File</span> IRS Form <br/> 2290 <span>Online</span>
                     </Typography>
-                    <Typography className="p-2">
+                    <Typography className="p-2" fontWeight="bold" fontSize="medium">
                         HVUT Form 2290 Heavy Highway Vehicle Use Tax is used for heavy vehicles that have a taxable gross weight of 55,000 pounds.
                     </Typography>
                     <Grid container>
@@ -99,7 +99,7 @@ const Home: NextPage = () => {
                                 className="shadow-none"
                                 style={
                                     {
-                                        background: "linear-gradient(90deg, #0072BA , #99c928 60%)",
+                                        background: "linear-gradient(90deg, #0072BA , #99c928 100%)",
                                         textTransform: "unset"
                                     }
                                 }
@@ -128,7 +128,7 @@ const Home: NextPage = () => {
                     </Grid>
                 </Grid>
                 <Grid item xs={12} sm={6} md={7} className="p-2">
-                    <img src="/banner-truck.jpg" className="w-100"/>
+                    <img src="/banner-truck.png" className="w-100"/>
                 </Grid>
             </Grid>
             <Grid
@@ -183,7 +183,7 @@ const Home: NextPage = () => {
                     </Grid>
                 </Grid>
                 <Grid item xs={12} sm={6} className="p-2">
-                    <img src="/file-truck.jpg" className="w-100"/>
+                    <img src="/file-truck.png" className="w-100"/>
                 </Grid>
             </Grid>
             <Grid container justifyContent="center" style={{background: "#0A4970"}} className="p-5">
