@@ -73,6 +73,7 @@ const Home: NextPage = () => {
 
     return (
         <Grid container direction="column" wrap="nowrap">
+            
             <Grid
                 container
                 alignItems="center"

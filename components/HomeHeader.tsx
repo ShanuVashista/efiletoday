@@ -9,12 +9,15 @@ import React from "react";
 const HomeHeader = () => {
     return (
         <Grid
-            container className="p-3 m-5" style={
+            container style={
                 {
                     borderBottomLeftRadius: 25,
                     borderBottomRightRadius: 25,
                     background: "linear-gradient(90deg, #99c928 , #0072BA 100%)",
-                    textTransform: "unset"
+                    textTransform: "unset",
+                    position: "absolute",
+                    top: "0",
+                    width: "fit-content" 
                 }
             }
         >
@@ -39,28 +42,28 @@ const HomeHeader = () => {
                     </Grid>
                 </Grid>
                 <Grid item xs={12} className="p-2" style={{color: "white"}}>
-                    <Grid item xs={2} className={styles.headerLinkAlign}>
+                    <Grid item xs={2} className={styles.headerLinkAlign} style={{paddingLeft: 60}}>
                         <Typography><a href="#">Home</a></Typography>
                     </Grid>
-                    <Grid item xs={2} className={styles.headerLinkAlign}>
+                    <Grid item xs={2} className={styles.headerLinkAlign} style={{paddingLeft: 60}}>
                         <Typography><a href="#">File</a></Typography>
                     </Grid>
-                    <Grid item xs={2} className={styles.headerLinkAlign}>
+                    <Grid item xs={2} className={styles.headerLinkAlign} style={{paddingLeft: 60}}>
                         <Typography><a href="#">Pay</a></Typography>
                     </Grid>
-                    <Grid item xs={2} className={styles.headerLinkAlign}>
+                    <Grid item xs={2} className={styles.headerLinkAlign} style={{paddingLeft: 60}}>
                         <Typography><a href="#">Refunds</a> </Typography>
                     </Grid>
-                    <Grid item xs={3} className={styles.headerLinkAlign}>
+                    <Grid item xs={3} className={styles.headerLinkAlign} style={{paddingLeft: 60}}>
                         <Typography><a href="#">Forms & Instructions</a> </Typography>
                     </Grid>
-                    <Grid item xs={1} className={styles.headerLinkAlign}>
+                    <Grid item xs={1} className={styles.headerLinkAlign} style={{paddingLeft: 60}}>
                         <Typography><a href="#">Contact</a></Typography>
                     </Grid>
-                    <Grid item xs={1} className={styles.headerLinkAlign}>
+                    <Grid item xs={1} className={styles.headerLinkAlign} style={{paddingLeft: 60}}>
                         <BsSearch/>
                     </Grid>
-                    <Grid item xs={2} className={styles.headerLinkAlign}>
+                    <Grid item xs={2} className={styles.headerLinkAlign} style={{paddingLeft: 60}}>
                         <Button
                             variant="contained"
                             size="large"
