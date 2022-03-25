@@ -2,7 +2,6 @@ import mongoose from "mongoose";
 const MONGODB_URI = process.env.MONGODB_URI;
 
 declare global {
-    function someFunction(): string;
     // eslint-disable-next-line no-var
     var mongoose: {
         conn: mongoose.Connection | mongoose.Mongoose | null,
