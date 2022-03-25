@@ -1,28 +1,56 @@
-import {Button, Grid, Typography} from "@mui/material";
+import {Button, Grid, IconButton, Typography} from "@mui/material";
 import Image from "next/image";
 import logo from "../public/Fin_E-fileLogo.png";
-import {BsFillTelephoneFill, BsSearch} from "react-icons/bs";
+import {BsFillTelephoneFill} from "react-icons/bs";
 import {HiOutlineMailOpen} from "react-icons/hi";
-import styles from "../styles/Home.module.scss";
 import React from "react";
+import {Search} from "react-feather";
 
 const HomeHeader = () => {
+    const links = [
+        {
+            label: "Home",
+            href: ""
+        },
+        {
+            label: "File",
+            href: ""
+        },
+        {
+            label: "Pay",
+            href: ""
+        },
+        {
+            label: "Refunds",
+            href: ""
+        },
+        {
+            label: "Forms & Instructions",
+            href: ""
+        },
+        {
+            label: "Contact",
+            href: ""
+        },
+    ];
+
     return (
         <Grid
-            container style={
+            container
+            className="homeHeader"
+            style={
                 {
                     borderBottomLeftRadius: 25,
                     borderBottomRightRadius: 25,
                     background: "linear-gradient(90deg, #99c928 , #0072BA 100%)",
-                    textTransform: "unset",
                     position: "absolute",
-                    top: "0",
-                    width: "fit-content" 
+                    top: 0,
+                    left: "auto",
                 }
             }
         >
             <Grid
-                item xs={1} className="p-2" style={
+                className="p-2" style={
                     {
                         borderBottomLeftRadius: 25,
                         borderBottomRightRadius: 25,
@@ -30,43 +58,40 @@ const HomeHeader = () => {
                     }
                 }
             >
-                <Image src={logo} height={100} width={150}/>
+                <Image src={logo} height={100} width={120}/>
             </Grid>
-            <Grid item xs={11}>
-                <Grid item xs={12} className="p-2" style={{color: "white"}}>
-                    <Grid item xs={6} style={{paddingLeft: 80}}>
-                        <BsFillTelephoneFill />&nbsp;
-                        <Typography style={{display: "inline-block"}}>+1 (414) 690-6435 &nbsp;&nbsp;|&nbsp;&nbsp;</Typography>
-                        <HiOutlineMailOpen fontSize="large" />&nbsp;
-                        <Typography style={{display: "inline-block"}}>info@efiletoday.com</Typography>
+            <Grid container direction="column" wrap="nowrap" item xs>
+                <Grid container className="p-2 text-white">
+                    <Grid container wrap="nowrap" className="w-auto p-2" alignItems="center">
+                        <BsFillTelephoneFill/>
+                        <Typography component={"a"} href={"tel:'+14146906435'"} style={{marginLeft: ".5rem"}}>
+                            +1 (414) 690-6435 |
+                        </Typography>
+                    </Grid>
+                    <Grid container wrap="nowrap" className="w-auto p-2" alignItems="center">
+                        <HiOutlineMailOpen fontSize="large"/>
+                        <Typography component={"a"} href={"mailto:'info@efiletoday.com'"} style={{marginLeft: ".5rem"}}>
+                            info@efiletoday.com
+                        </Typography>
                     </Grid>
                 </Grid>
-                <Grid item xs={12} className="p-2" style={{color: "white"}}>
-                    <Grid item xs={2} className={styles.headerLinkAlign} style={{paddingLeft: 60}}>
-                        <Typography><a href="#">Home</a></Typography>
+                <Grid container alignItems="center" wrap="nowrap" justifyContent={"space-between"}>
+                    {
+                        links.map((link, i) => <Grid key={i} className="p-2">
+                            <Button className="text-white">
+                                {link.label}
+                            </Button>
+                        </Grid>)
+                    }
+                    <Grid className="p-2">
+                        <IconButton>
+                            <Search color="white" size={20}/>
+                        </IconButton>
                     </Grid>
-                    <Grid item xs={2} className={styles.headerLinkAlign} style={{paddingLeft: 60}}>
-                        <Typography><a href="#">File</a></Typography>
-                    </Grid>
-                    <Grid item xs={2} className={styles.headerLinkAlign} style={{paddingLeft: 60}}>
-                        <Typography><a href="#">Pay</a></Typography>
-                    </Grid>
-                    <Grid item xs={2} className={styles.headerLinkAlign} style={{paddingLeft: 60}}>
-                        <Typography><a href="#">Refunds</a> </Typography>
-                    </Grid>
-                    <Grid item xs={3} className={styles.headerLinkAlign} style={{paddingLeft: 60}}>
-                        <Typography><a href="#">Forms & Instructions</a> </Typography>
-                    </Grid>
-                    <Grid item xs={1} className={styles.headerLinkAlign} style={{paddingLeft: 60}}>
-                        <Typography><a href="#">Contact</a></Typography>
-                    </Grid>
-                    <Grid item xs={1} className={styles.headerLinkAlign} style={{paddingLeft: 60}}>
-                        <BsSearch/>
-                    </Grid>
-                    <Grid item xs={2} className={styles.headerLinkAlign} style={{paddingLeft: 60}}>
+                    <Grid item xs={2} >
                         <Button
                             variant="contained"
-                            size="large"
+                            size="small"
                             className="shadow-none"
                             style={
                                 {
@@ -75,7 +100,7 @@ const HomeHeader = () => {
                                 }
                             }
                         >
-                            <Typography fontSize="small">Login/Register</Typography>
+                            Login/Register
                         </Button>
                     </Grid>
                 </Grid>

@@ -74,21 +74,21 @@ const Home: NextPage = () => {
 
     return (
         <Grid container direction="column" wrap="nowrap">
-            
             <Grid
                 container
                 alignItems="center"
-                className="banner-container p-5"
+                justifyContent="center"
+                className="banner-container p-5 main-container"
                 style={
                     {
                         background: "url('/banner.png') no-repeat",
                         backgroundSize: "cover",
-                        minHeight: 900
+                        paddingTop: "110px !important"
                     }
                 }
             >
                 <HomeHeader/>
-                <Grid item container direction="column" wrap="nowrap" xs={12} sm={6} md={5} className="p-5">
+                <Grid item container direction="column" wrap="nowrap" xs={12} md={6} lg={5} className="p-2 p-lg-5">
                     <Typography variant="h2" className="font-weight-bold text-white banner-title p-2" style={{textShadow: "0 1px 2px black"}}>
                         <span>File</span> IRS Form <br/> 2290 <span>Online</span>
                     </Typography>
@@ -131,14 +131,14 @@ const Home: NextPage = () => {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid item xs={12} sm={6} md={7} className="p-2">
+                <Grid item xs={12} md={6} lg={7} className="p-2">
                     <img src="/banner-truck.png" className="w-100"/>
                 </Grid>
             </Grid>
             <Grid
                 container
                 alignItems="center"
-                className="banner-container p-5"
+                className="banner-container p-5 main-container"
                 style={
                     {
                         background: "url('/file-bg.jpg') no-repeat",
@@ -147,7 +147,7 @@ const Home: NextPage = () => {
                     }
                 }
             >
-                <Grid item container direction="column" wrap="nowrap" xs={12} sm={6} md={5} className="p-2">
+                <Grid item container direction="column" wrap="nowrap" xs={12} md={5} className="p-2">
                     <Typography variant="h3" className="font-weight-bold p-2">
                         <span style={{color: "#99c928"}}>File 2290</span><br/> For Your Trucks
                     </Typography>
@@ -186,11 +186,11 @@ const Home: NextPage = () => {
                     <Grid container>
                     </Grid>
                 </Grid>
-                <Grid item xs={12} sm={6} className="p-2">
+                <Grid item xs={12} md={6} className="p-2">
                     <img src="/file-truck.png" className="w-100"/>
                 </Grid>
             </Grid>
-            <Grid container justifyContent="center" style={{background: "#0A4970"}} className="p-5">
+            <Grid container justifyContent="center" style={{background: "#0A4970"}} className="p-5 main-container">
                 <Typography component={Grid} item xs={12} className="p-3 text-center font-weight-bold text-white" variant="h4">
                     What <span style={{color: "#85bc3c"}}>efile today</span> Provides You
                 </Typography>
@@ -236,7 +236,7 @@ const Home: NextPage = () => {
                     }
                 </Grid>
             </Grid>
-            <Grid container className="position-relative">
+            <Grid container className="position-relative main-container">
                 <img src={"/cta.jpg"} className="w-100"/>
                 <Grid container direction="column" justifyContent="center" wrap="nowrap" className="overlay-container with-cta">
                     <Typography variant="h5" className="font-weight-bold text-white p-2">
@@ -266,7 +266,7 @@ const Home: NextPage = () => {
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid container direction="column" justifyContent="center" alignItems="center" wrap="nowrap" className="start-container p-5">
+            <Grid container direction="column" justifyContent="center" alignItems="center" wrap="nowrap" className="start-container p-5 main-container">
                 <Typography variant="h3" className="font-weight-bold p-5">
                     How to <span style={{color: "#85bc3c"}}>Start?</span>
                 </Typography>
@@ -298,7 +298,7 @@ const Home: NextPage = () => {
                     }
                 </Grid>
             </Grid>
-            <Grid container>
+            <Grid container className=" main-container">
                 <Grid item xs={12} md={5}>
                     <img src="/faq.jpg" className="w-100"/>
                 </Grid>
