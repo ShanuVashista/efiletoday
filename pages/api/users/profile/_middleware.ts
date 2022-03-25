@@ -26,6 +26,7 @@ export async function middleware (req: NextRequest){
         } else {
             throw new Error("Authentication token required");
         }
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error:any){
         return new Response(error.message, {status: 401});
     }
