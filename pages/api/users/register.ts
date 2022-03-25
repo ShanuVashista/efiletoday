@@ -8,15 +8,15 @@ export default async function handler (
     req: NextApiRequest,
     res: NextApiResponse
 ){
-    // if (!process.env.JWT_SECRET) throw new Error("JWT_SECRET is not defined");
+    if (!process.env.JWT_SECRET) throw new Error("JWT_SECRET is not defined");
     const {method} = req;
     await dbConnect();
 
     switch (method){
         case "POST":
             try {
-                const user = await User.create(req.body);
-                const token = jwt.sign({_id: user[0]._id}, "efiletoday-key", {expiresIn: "1d"});
+                const user = await new User(req.body);
+                const token = jwt.sign({_id: user._id}, process.env.JWT_SECRET, {expiresIn: "1d"});
 
                 res.status(201).json({
                     success: true,
@@ -32,8 +32,6 @@ export default async function handler (
 
                     return;
                 }
-
-                res.status(400).json({success: false});
             }
 
             break;

@@ -8,6 +8,7 @@ export default async function handler (
     req: NextApiRequest,
     res: NextApiResponse
 ){
+    if (!process.env.JWT_SECRET) throw new Error("JWT_SECRET is not defined");
     const {method} = req;
     await dbConnect();
 
@@ -28,7 +29,7 @@ export default async function handler (
                             data: "Wrong Credential"
                         });
                     } else {
-                        const token = jwt.sign({_id: user[0]._id}, "efiletoday-key", {expiresIn: "1d"});
+                        const token = jwt.sign({_id: user[0]._id}, process.env.JWT_SECRET, {expiresIn: "1d"});
                                                 
                         res.status(200).json({
                             success: true,

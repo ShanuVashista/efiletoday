@@ -3,6 +3,7 @@ import jwt from "jsonwebtoken";
 
 export async function middleware (req: NextRequest){
     try {
+        if (!process.env.JWT_SECRET) throw new Error("JWT_SECRET is not defined");
         const response = NextResponse.next();
         let token = req["headers"].get("authorization");
 
@@ -16,7 +17,7 @@ export async function middleware (req: NextRequest){
         }
 
         if (token){
-            const token_details = await jwt.verify(token, "efiletoday-key");
+            const token_details = jwt.verify(token, process.env.JWT_SECRET);
 
             if (!token_details){
                 throw new Error("Authentication failed");

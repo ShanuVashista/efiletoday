@@ -10,6 +10,7 @@ export default async function handler (
     req: NextApiRequest,
     res: NextApiResponse
 ){
+    if (!process.env.JWT_SECRET) throw new Error("JWT_SECRET is not defined");
     const {method} = req;
     await dbConnect();
 
@@ -27,9 +28,9 @@ export default async function handler (
                     token = baerer[1];
                 }
 
-                const token_details = await jwt.verify(token, "efiletoday-key") as JwtPayload;
+                const token_details = jwt.verify(token, process.env.JWT_SECRET) as JwtPayload;
                 const users = await User.find({_id: token_details._id});
-
+                
                 res.status(200).json({
                     success: true,
                     data: users
