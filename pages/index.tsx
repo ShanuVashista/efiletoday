@@ -2,6 +2,7 @@ import type {NextPage} from "next";
 import {Accordion, AccordionDetails, AccordionSummary, Button, Grid, TextField, Typography} from "@mui/material";
 import React from "react";
 import {Plus} from "react-feather";
+import HomeFooter from "../components/Footer/HomeFooter";
 
 const Home: NextPage = () => {
     const fileData = [
@@ -439,6 +440,7 @@ const Home: NextPage = () => {
                     <img src="/get-in-touch.jpg" className="w-100 h-100"/>
                 </Grid>
             </Grid>
+            <HomeFooter/>
         </Grid>
     );
 };
