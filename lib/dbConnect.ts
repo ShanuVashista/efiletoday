@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const MONGODB_URI = 'mongodb://SohamDB:Pa$$w(2)Rd22@localhost:27017/efiletoday?authSource=admin';
+const MONGODB_URI = process.env.MONGODB_URI;
 
 declare global {
     function someFunction(): string;
