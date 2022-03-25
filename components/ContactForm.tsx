@@ -1,50 +1,53 @@
-import * as React from 'react';
-import Typography from "@mui/material/Typography";
-import styles from './components.module.scss'
-import {Grid, Box, TextField, Button} from "@mui/material";
-import {IoCallOutline} from "react-icons/io5"
-import {AiOutlineMail} from "react-icons/ai"
-import {HiOutlineLocationMarker} from "react-icons/hi"
-import {AiOutlineShareAlt} from "react-icons/ai"
-import {RiFacebookCircleFill} from "react-icons/ri"
-import {AiFillTwitterCircle} from "react-icons/ai"
-import {GrLinkedinOption} from "react-icons/gr"
+import * as React from "react";
 import {useState} from "react";
+import Typography from "@mui/material/Typography";
+import styles from "./components.module.scss";
+import {Box, Button, Grid, TextField} from "@mui/material";
+import {IoCallOutline} from "react-icons/io5";
+import {AiFillTwitterCircle, AiOutlineMail, AiOutlineShareAlt} from "react-icons/ai";
+import {HiOutlineLocationMarker} from "react-icons/hi";
+import {RiFacebookCircleFill} from "react-icons/ri";
+import {GrLinkedinOption} from "react-icons/gr";
 
 const ContactForm = () => {
-    const [fname, setFname] = useState('')
-    const [email, setEmail] = useState('')
-    const [subject, setSubject] = useState('')
-    const [message, setMessage] = useState('')
-    const [fnameError, setFnameError] = useState<any>('')
-    const [emailError, setEmailError] = useState<any>('')
-    const [subjectError, setSubjectError] = useState<any>('')
-    const [messageError, setMessageError] = useState<any>('')
+    const [fname, setFname] = useState("");
+    const [email, setEmail] = useState("");
+    const [subject, setSubject] = useState("");
+    const [message, setMessage] = useState("");
+    const [fnameError, setFnameError] = useState<any>("");
+    const [emailError, setEmailError] = useState<any>("");
+    const [subjectError, setSubjectError] = useState<any>("");
+    const [messageError, setMessageError] = useState<any>("");
 
     const onSubmit = () => {
         let fnameError, emailError, subjectError, messageError, isValid = true;
-        if (fname == '') {
-            fnameError = 'Please enter first name'
-            isValid = false
+
+        if (fname == ""){
+            fnameError = "Please enter first name";
+            isValid = false;
         }
-        if (email ==  '') {
-            emailError = 'Please enter email'
-            isValid = false
+
+        if (email ==  ""){
+            emailError = "Please enter email";
+            isValid = false;
         }
-        if (subject == '') {
-            subjectError = 'Please enter subject'
-            isValid = false
+
+        if (subject == ""){
+            subjectError = "Please enter subject";
+            isValid = false;
         }
-        if (message == '') {
-            messageError = 'Please enter message'
-            isValid = false
+
+        if (message == ""){
+            messageError = "Please enter message";
+            isValid = false;
         }
-        setFnameError(fnameError)
-        setEmailError(emailError)
-        setSubjectError(subjectError)
-        setMessageError(messageError)
-        return isValid
-    }
+
+        setFnameError(fnameError);
+        setEmailError(emailError);
+        setSubjectError(subjectError);
+        setMessageError(messageError);
+        return isValid;
+    }; 
 
     return(
         <>
@@ -162,7 +165,7 @@ const ContactForm = () => {
             <br/>
 
         </>
-    )
-}
+    );
+};
 
 export default ContactForm;
