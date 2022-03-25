@@ -1,5 +1,5 @@
-import dbConnect from "../../lib/dbConnect";
-import User from "../../models/User";
+import dbConnect from "../../../../lib/dbConnect";
+import User from "../../../../models/User";
 import type {NextApiRequest, NextApiResponse} from "next";
 
 
@@ -26,11 +26,9 @@ export default async function handler (
             break;
         case "POST":
             try {
-                const user = await User.create(req.body);
-
-                res.status(201).json({
+                res.status(200).json({
                     success: true,
-                    data: user
+                    data: "In Progress"
                 });
             } catch (error){
                 res.status(400).json({success: false});

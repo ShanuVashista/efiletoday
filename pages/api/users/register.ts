@@ -1,7 +1,7 @@
-import dbConnect from "../../lib/dbConnect";
-import User from "../../models/User";
+import dbConnect from "../../../lib/dbConnect";
+import User from "../../../models/User";
 import type {NextApiRequest, NextApiResponse} from "next";
-
+import jwt from "jsonwebtoken";
 
 export default async function handler (
     req: NextApiRequest,
@@ -11,25 +11,16 @@ export default async function handler (
     await dbConnect();
 
     switch (method){
-        case "GET":
-            try {
-                const users = await User.find({});
-
-                res.status(200).json({
-                    success: true,
-                    data: users
-                });
-            } catch (error){
-                res.status(400).json({success: false});
-            }
-
-            break;
         case "POST":
             try {
                 const user = await User.create(req.body);
-
+                let token = jwt.sign({
+                    data: user
+                  }, 'efiletoday-key', { expiresIn: '1d' });
+                  
                 res.status(201).json({
                     success: true,
+                    accesstoken:token,
                     data: user
                 });
             } catch (error){
