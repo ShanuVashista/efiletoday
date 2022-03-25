@@ -10,14 +10,24 @@ body {
 
 .main-container {
   @media screen and (min-width: 1500px) {
-    padding-left:17% !important;
-    padding-right:17% !important;
+    padding-left: 17% !important;
+    padding-right: 17% !important;
   }
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.homeHeader {
+  width: 100%;
+  @media screen and (min-width: 1089px) {
+    width: 90%;
+  }
+  @media screen and (min-width: 1400px) {
+    width: 60%;
+  }
 }
 
 * {

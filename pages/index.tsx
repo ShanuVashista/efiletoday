@@ -76,6 +76,7 @@ const Home: NextPage = () => {
             <Grid
                 container
                 alignItems="center"
+                justifyContent="center"
                 className="banner-container p-5 main-container"
                 style={
                     {

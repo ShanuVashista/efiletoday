@@ -4,7 +4,7 @@ import logo from "../public/Fin_E-fileLogo.png";
 import {BsFillTelephoneFill} from "react-icons/bs";
 import {HiOutlineMailOpen} from "react-icons/hi";
 import React from "react";
-import {BiSearch} from "react-icons/all";
+import {Search} from "react-feather";
 
 const HomeHeader = () => {
     const links = [
@@ -36,19 +36,21 @@ const HomeHeader = () => {
 
     return (
         <Grid
-            container style={
+            container
+            className="homeHeader"
+            style={
                 {
                     borderBottomLeftRadius: 25,
                     borderBottomRightRadius: 25,
                     background: "linear-gradient(90deg, #99c928 , #0072BA 100%)",
                     position: "absolute",
                     top: 0,
-                    left: 0,
+                    left: "auto",
                 }
             }
         >
             <Grid
-                item xs={2} md={1} className="p-2" style={
+                className="p-2" style={
                     {
                         borderBottomLeftRadius: 25,
                         borderBottomRightRadius: 25,
@@ -56,9 +58,9 @@ const HomeHeader = () => {
                     }
                 }
             >
-                <Image src={logo} height={100} width={150}/>
+                <Image src={logo} height={100} width={120}/>
             </Grid>
-            <Grid container direction="column" wrap="nowrap" item xs={10} md={11}>
+            <Grid container direction="column" wrap="nowrap" item xs>
                 <Grid container className="p-2 text-white">
                     <Grid container wrap="nowrap" className="w-auto p-2" alignItems="center">
                         <BsFillTelephoneFill/>
@@ -83,7 +85,7 @@ const HomeHeader = () => {
                     }
                     <Grid className="p-2">
                         <IconButton>
-                            <BiSearch color="white" size={20}/>
+                            <Search color="white" size={20}/>
                         </IconButton>
                     </Grid>
                     <Grid item xs={2} >
