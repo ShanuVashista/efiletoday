@@ -1,30 +1,33 @@
-import { NextFetchEvent, NextRequest, NextResponse } from 'next/server'
-
+import {NextRequest, NextResponse} from "next/server";
 import jwt from "jsonwebtoken";
-export function middleware(req: NextRequest, ev: NextFetchEvent) {
+
+export async function middleware (req: NextRequest){
     try {
-        let response = NextResponse.next()
-        let token = req['headers'].get('authorization')
-        if (
-          typeof token != "undefined" &&
-          token != null
-        ) {
-          const barerheader = token;
-          const baerer = barerheader.split(" ");
-          token = baerer[1];
+        const response = NextResponse.next();
+        let token = req["headers"].get("authorization");
+
+        if(
+            typeof token != "undefined" &&
+            token != null
+        ){
+            const barerheader = token;
+            const baerer = barerheader.split(" ");
+            token = baerer[1];
         }
-        if (token) {
-          jwt.verify(token, 'efiletoday-key', function (err, decoded) {
-            if (err) {
-              throw new Error("Authentication failed");
+
+        if (token){
+            const token_details = await jwt.verify(token, "efiletoday-key");
+
+            if (!token_details){
+                throw new Error("Authentication failed");
             } else {
-                return response
+                return response;
             }
-          });
         } else {
-          throw new Error("Authentication token required");
+            throw new Error("Authentication token required");
         }
-      } catch (error) {
-        
-      }
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } catch (error:any){
+        return new Response(error.message, {status: 401});
+    }
 }

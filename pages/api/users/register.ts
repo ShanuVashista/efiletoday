@@ -8,7 +8,7 @@ export default async function handler (
     req: NextApiRequest,
     res: NextApiResponse
 ){
-    if (!process.env.JWT_SECRET) throw new Error("JWT_SECRET is not defined");
+    // if (!process.env.JWT_SECRET) throw new Error("JWT_SECRET is not defined");
     const {method} = req;
     await dbConnect();
 
@@ -16,7 +16,7 @@ export default async function handler (
         case "POST":
             try {
                 const user = await User.create(req.body);
-                const token = jwt.sign({data: user}, process.env.JWT_SECRET, {expiresIn: "1d"});
+                const token = jwt.sign({_id: user[0]._id}, "efiletoday-key", {expiresIn: "1d"});
 
                 res.status(201).json({
                     success: true,
