@@ -44,6 +44,9 @@ jspm_packages/
 # TypeScript v1 declaration files
 typings/
 .idea
+package-lock.json
+yarn-error.log
+yarn.lock
 
 # TypeScript cache
 *.tsbuildinfo
