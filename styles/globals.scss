@@ -1,14 +1,17 @@
 @import "~bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: 'Poppins', sans-serif !important;
 }
-.main-container{
+
+.main-container {
   max-width: 1300px
 }
+
 a {
   color: inherit;
   text-decoration: none;
@@ -19,42 +22,69 @@ a {
   box-sizing: border-box;
 }
 
-.p-2-all{
-  &*{
+.p-2-all {
+  & * {
     padding: .5rem;
   }
 }
-.font-weight-bold{
+
+.font-weight-bold {
   font-weight: bold;
 }
-.overlay-container{
+
+.overlay-container {
   top: 0;
   left: 0;
   bottom: 0;
   width: 100%;
   padding: 50px;
   position: absolute;
-  .overlay-form{
-    input{
+
+  .overlay-form {
+    input {
       background: white;
     }
-    fieldset{
-      border: none!important;
+
+    fieldset {
+      border: none !important;
     }
   }
-  &.with-cta{
+
+  &.with-cta {
     left: 50px;
     width: 50%;
     padding: 50px 80px;
   }
 }
-.start-container{
+
+.start-container {
   padding-bottom: 80px !important;
   background: url("/how-to-start.jpg") no-repeat;
   background-size: cover;
 }
-.start-card-container{
+
+.start-card-container {
   background: white;
   padding: 50px;
   min-height: 350px
+}
+
+.custom-form {
+  input, textarea {
+    background: #0072BA;
+    color: white;
+  }
+
+  fieldset {
+    border: none !important;
+  }
+}
+
+.banner-title {
+  span {
+    text-shadow: none;
+    background: linear-gradient(2deg, #fff 30%, #99c928 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }

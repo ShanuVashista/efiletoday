@@ -71,11 +71,119 @@ const Home: NextPage = () => {
 
     return (
         <Grid container direction="column" wrap="nowrap">
-            <Grid container>
-                <img src={"/banner.jpg"} className="w-100"/>
+            <Grid
+                container
+                alignItems="center"
+                className="banner-container p-5"
+                style={
+                    {
+                        background: "url('/banner.jpg') no-repeat",
+                        backgroundSize: "cover",
+                        minHeight: 600
+                    }
+                }
+            >
+                <Grid item container direction="column" wrap="nowrap" xs={12} sm={6} md={5} className="p-2">
+                    <Typography variant="h2" className="font-weight-bold text-white banner-title p-2" style={{textShadow: "0 1px 2px black"}}>
+                        <span>File</span> IRS Form <br/> 2290 <span>Online</span>
+                    </Typography>
+                    <Typography className="p-2">
+                        HVUT Form 2290 Heavy Highway Vehicle Use Tax is used for heavy vehicles that have a taxable gross weight of 55,000 pounds.
+                    </Typography>
+                    <Grid container>
+                        <Grid className="p-2">
+                            <Button
+                                variant="contained"
+                                size="large"
+                                className="shadow-none"
+                                style={
+                                    {
+                                        background: "linear-gradient(90deg, #0072BA , #99c928 60%)",
+                                        textTransform: "unset"
+                                    }
+                                }
+                            >
+                                Pay Now
+                            </Button>
+                        </Grid>
+                        <Grid className="p-2">
+                            <Button
+                                color="success"
+                                variant="outlined"
+                                size="large"
+                                className="shadow-none"
+                                style={
+                                    {
+                                        border: "1px solid #99c928",
+                                        textTransform: "unset",
+                                        background: "white",
+                                        color: "#0072BA"
+                                    }
+                                }
+                            >
+                                Go To IRS
+                            </Button>
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <Grid item xs={12} sm={6} md={7} className="p-2">
+                    <img src="/banner-truck.jpg" className="w-100"/>
+                </Grid>
             </Grid>
-            <Grid container>
-                <img src={"/file-bg.jpg"} className="w-100"/>
+            <Grid
+                container
+                alignItems="center"
+                className="banner-container p-5"
+                style={
+                    {
+                        background: "url('/file-bg.jpg') no-repeat",
+                        backgroundSize: "cover",
+                        minHeight: 600
+                    }
+                }
+            >
+                <Grid item container direction="column" wrap="nowrap" xs={12} sm={6} md={5} className="p-2">
+                    <Typography variant="h3" className="font-weight-bold p-2">
+                        <span style={{color: "#99c928"}}>File 2290</span><br/> For Your Trucks
+                    </Typography>
+                    <Typography className="p-2">
+                        HVUT Form 2290 Heavy Highway Vehicle Use Tax is used for heavy vehicles that have a taxable gross weight of 55,000 pounds or more, is used to calculate and pay taxes for those vehicle. This form is also needed when used vehicles are acquired for the current tax period.
+                    </Typography>
+                    <Grid container wrap="nowrap">
+                        <Grid className="p-2">
+                            <img src="/irs.png" style={{width: 70}}/>
+                        </Grid>
+                        <Grid container alignItems="center" className="p-2">
+                            <img src="/call.png" style={{width: 50}}/>
+                            <Typography className="p-2">
+                                Give us a Call <br/>
+                                <span className="font-weight-bold">
+                                    +1 (414) 690-6435
+                                </span>
+                            </Typography>
+                        </Grid>
+                    </Grid>
+                    <Grid className="p-2">
+                        <Button
+                            variant="contained"
+                            size="large"
+                            className="shadow-none"
+                            style={
+                                {
+                                    background: "linear-gradient(90deg, #0072BA , #99c928 60%)",
+                                    textTransform: "unset"
+                                }
+                            }
+                        >
+                            Read More
+                        </Button>
+                    </Grid>
+                    <Grid container>
+                    </Grid>
+                </Grid>
+                <Grid item xs={12} sm={6} className="p-2">
+                    <img src="/file-truck.jpg" className="w-100"/>
+                </Grid>
             </Grid>
             <Grid container justifyContent="center" style={{background: "#0A4970"}} className="p-5">
                 <Typography component={Grid} item xs={12} className="p-3 text-center font-weight-bold text-white" variant="h4">
@@ -262,80 +370,67 @@ const Home: NextPage = () => {
                     </Grid>
                 </Grid>
             </Grid>
+            <Grid container alignItems="center" className="p-2">
+                <Grid item xs={12}>
+
+                </Grid>
+            </Grid>
             <Grid container>
-                <Grid item xs={12} md={7} container direction="column" className="p-5">
-                    <Typography variant="h3" className="font-weight-bold p-2">
-                        Frequently <br/> Asked <span style={{color: "#85bc3c"}}>Questions</span>
+                <Grid item xs={12} md={6} container direction="column" className="p-5" style={{background: "#135882"}}>
+                    <Typography variant="h3" className="font-weight-bold p-2 text-white">
+                        Get <span style={{color: "#85bc3c"}}>In Touch</span>
                     </Typography>
-                    <Grid container direction="column" wrap="nowrap">
-                        {
-                            FaqData.map((data, i) => <Grid className="p-2" key={i}>
-                                <Accordion
-                                    variant="outlined"
-                                    classes={{root: "border-0"}}
-                                >
-                                    <AccordionSummary
-                                        classes={{content: "m-0 p-2"}}
-                                        className="p-2 rounded-1"
-                                        style={
-                                            {
-                                                minHeight: "auto",
-                                                background: "#f7f7f7",
-                                                border: "1px solid #b3b3b3"
-                                            }
-                                        }
-                                    >
-                                        <Grid
-                                            container alignItems="center" justifyContent="center"
-                                            className="rounded-circle" style={
-                                                {
-                                                    width: 22,
-                                                    height: 22,
-                                                    marginRight: 8,
-                                                    background: "white"
-                                                }
-                                            }
-                                        >
-                                            <Plus size={15} style={{color: "#b3b3b3"}}/>
-                                        </Grid>
-                                        <Typography className="font-weight-bold">{data.question}</Typography>
-                                    </AccordionSummary>
-                                    <AccordionDetails
-                                        className="p-3 rounded-1 mt-2"
-                                        style={
-                                            {
-                                                minHeight: "auto",
-                                                background: "#f7f7f7",
-                                                border: "1px solid #b3b3b3"
-                                            }
-                                        }
-                                    >
-                                        <Typography>
-                                            {data.answer}
-                                        </Typography>
-                                    </AccordionDetails>
-                                </Accordion>
-                            </Grid>)
-                        }
-                        <Grid className="p-2">
-                            <Button
-                                fullWidth
-                                size="large"
-                                variant="contained"
-                                className="shadow-none"
-                                style={
-                                    {
-                                        background: "#99c928",
-                                        textTransform: "inherit"
-                                    }
-                                }
-                            >
-                                View All
-                            </Button>
-                        </Grid>
+                    <Typography className="p-2 text-white">
+                        When is form 2290 due? Form 2290 is an annual tax paid to tax internal Revenue Service. For heavy vehicles with a taxable gross weight of 55,000 pounds or more.
+                    </Typography>
+                    <Grid className="p-2 custom-form">
+                        <TextField
+                            fullWidth
+                            className="rounded-0"
+                            placeholder="Full Name"
+                            variant="outlined"
+                        />
+                    </Grid>
+                    <Grid className="p-2 custom-form">
+                        <TextField
+                            fullWidth
+                            className="rounded-0"
+                            placeholder="Email Address"
+                            variant="outlined"
+                        />
+                    </Grid>
+                    <Grid className="p-2 custom-form">
+                        <TextField
+                            fullWidth
+                            className="rounded-0"
+                            placeholder="Subject"
+                            variant="outlined"
+                        />
+                    </Grid>
+                    <Grid className="p-2 custom-form">
+                        <TextField
+                            rows={5}
+                            multiline
+                            fullWidth
+                            className="rounded-0"
+                            placeholder="Message"
+                            variant="outlined"
+                            style={{background: "#0072BA"}}
+                        />
+                    </Grid>
+                    <Grid className="p-2">
+                        <Button
+                            fullWidth
+                            size="large"
+                            variant="contained"
+                            className="shadow-none"
+                            style={{background: "#99c928"}}
+                        >
+                            Send
+                        </Button>
                     </Grid>
                 </Grid>
-                <Grid item xs={12} md={5}>
+                <Grid item xs={12} md={6}>
                     <img src="/get-in-touch.jpg" className="w-100 h-100"/>
                 </Grid>
             </Grid>
