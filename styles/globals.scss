@@ -23,10 +23,10 @@ a {
 .homeHeader {
   width: 100%;
   @media screen and (min-width: 1089px) {
-    width: 90%;
+    width: 90% !important;
   }
   @media screen and (min-width: 1350px) {
-    width: 62%;
+    width: 62% !important;
   }
 }
 
