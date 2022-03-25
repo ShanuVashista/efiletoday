@@ -9,7 +9,10 @@ body {
 }
 
 .main-container {
-  //max-width: 1300px
+  @media screen and (min-width: 1500px) {
+    padding-left:17% !important;
+    padding-right:17% !important;
+  }
 }
 
 a {
@@ -54,6 +57,10 @@ a {
     left: 50px;
     width: 50%;
     padding: 50px 80px;
+    @media screen and (min-width: 1500px) {
+      left: 17% !important;
+      width: 35%;
+    }
   }
 }
 

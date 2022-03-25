@@ -73,11 +73,10 @@ const Home: NextPage = () => {
 
     return (
         <Grid container direction="column" wrap="nowrap">
-            
             <Grid
                 container
                 alignItems="center"
-                className="banner-container p-5"
+                className="banner-container p-5 main-container"
                 style={
                     {
                         background: "url('/banner.png') no-repeat",
@@ -137,7 +136,7 @@ const Home: NextPage = () => {
             <Grid
                 container
                 alignItems="center"
-                className="banner-container p-5"
+                className="banner-container p-5 main-container"
                 style={
                     {
                         background: "url('/file-bg.jpg') no-repeat",
@@ -189,7 +188,7 @@ const Home: NextPage = () => {
                     <img src="/file-truck.png" className="w-100"/>
                 </Grid>
             </Grid>
-            <Grid container justifyContent="center" style={{background: "#0A4970"}} className="p-5">
+            <Grid container justifyContent="center" style={{background: "#0A4970"}} className="p-5 main-container">
                 <Typography component={Grid} item xs={12} className="p-3 text-center font-weight-bold text-white" variant="h4">
                     What <span style={{color: "#85bc3c"}}>efile today</span> Provides You
                 </Typography>
@@ -235,7 +234,7 @@ const Home: NextPage = () => {
                     }
                 </Grid>
             </Grid>
-            <Grid container className="position-relative">
+            <Grid container className="position-relative main-container">
                 <img src={"/cta.jpg"} className="w-100"/>
                 <Grid container direction="column" justifyContent="center" wrap="nowrap" className="overlay-container with-cta">
                     <Typography variant="h5" className="font-weight-bold text-white p-2">
@@ -265,7 +264,7 @@ const Home: NextPage = () => {
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid container direction="column" justifyContent="center" alignItems="center" wrap="nowrap" className="start-container p-5">
+            <Grid container direction="column" justifyContent="center" alignItems="center" wrap="nowrap" className="start-container p-5 main-container">
                 <Typography variant="h3" className="font-weight-bold p-5">
                     How to <span style={{color: "#85bc3c"}}>Start?</span>
                 </Typography>
@@ -297,7 +296,7 @@ const Home: NextPage = () => {
                     }
                 </Grid>
             </Grid>
-            <Grid container>
+            <Grid container className=" main-container">
                 <Grid item xs={12} md={5}>
                     <img src="/faq.jpg" className="w-100"/>
                 </Grid>
@@ -374,7 +373,7 @@ const Home: NextPage = () => {
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid container alignItems="center" className="p-5">
+            <Grid container alignItems="center" className="p-5 main-container">
                 <Grid item xs={12} md={3}>
                     <Typography variant="h3" className="font-weight-bold p-2">
                         What <br/> <span style={{color: "#99c928"}}>Peoples</span> Say
@@ -384,7 +383,7 @@ const Home: NextPage = () => {
                     </Typography>
                 </Grid>
             </Grid>
-            <Grid container>
+            <Grid container className="main-container">
                 <Grid item xs={12} md={6} container direction="column" className="p-5" style={{background: "#135882"}}>
                     <Typography variant="h3" className="font-weight-bold p-2 text-white">
                         Get <span style={{color: "#85bc3c"}}>In Touch</span>

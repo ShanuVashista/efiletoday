@@ -4,7 +4,7 @@ import {Grid} from "@mui/material";
 import React from "react";
 
 function MyApp ({Component, pageProps}: AppProps){
-    return <Grid className="main-container">
+    return <Grid>
         <Component {...pageProps} />
     </Grid>;
 }
