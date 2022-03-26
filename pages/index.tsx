@@ -82,12 +82,12 @@ const Home: NextPage = () => {
                     {
                         background: "url('/banner.png') no-repeat",
                         backgroundSize: "cover",
-                        minHeight: 900
+                        paddingTop: "110px !important"
                     }
                 }
             >
                 <HomeHeader/>
-                <Grid item container direction="column" wrap="nowrap" xs={12} sm={6} md={5} className="p-5">
+                <Grid item container direction="column" wrap="nowrap" xs={12} md={6} lg={5} className="p-2 p-lg-5">
                     <Typography variant="h2" className="font-weight-bold text-white banner-title p-2" style={{textShadow: "0 1px 2px black"}}>
                         <span>File</span> IRS Form <br/> 2290 <span>Online</span>
                     </Typography>
@@ -130,7 +130,7 @@ const Home: NextPage = () => {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid item xs={12} sm={6} md={7} className="p-2">
+                <Grid item xs={12} md={6} lg={7} className="p-2">
                     <img src="/banner-truck.png" className="w-100"/>
                 </Grid>
             </Grid>
@@ -146,7 +146,7 @@ const Home: NextPage = () => {
                     }
                 }
             >
-                <Grid item container direction="column" wrap="nowrap" xs={12} sm={6} md={5} className="p-2">
+                <Grid item container direction="column" wrap="nowrap" xs={12} md={5} className="p-2">
                     <Typography variant="h3" className="font-weight-bold p-2">
                         <span style={{color: "#99c928"}}>File 2290</span><br/> For Your Trucks
                     </Typography>
@@ -185,7 +185,7 @@ const Home: NextPage = () => {
                     <Grid container>
                     </Grid>
                 </Grid>
-                <Grid item xs={12} sm={6} className="p-2">
+                <Grid item xs={12} md={6} className="p-2">
                     <img src="/file-truck.png" className="w-100"/>
                 </Grid>
             </Grid>

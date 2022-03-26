@@ -1,4 +1,4 @@
-import {Avatar, Grid, List, ListItem, ListItemAvatar, Button} from "@mui/material";
+import {Avatar, Button, Grid, List, ListItem, ListItemAvatar} from "@mui/material";
 import React from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
@@ -20,7 +20,6 @@ function HomeFooter (){
                 }
             >
                 <Container sx={{py: 12}}>
-
                     <Grid container spacing={4} color={"white"}>
                         <Grid item xs={12} md={3}>
                             <Stack spacing={2}>
@@ -229,19 +228,6 @@ function HomeFooter (){
                     
                 </Container>
             </Box>
-
-            {/* <Box
-                sx={
-                    {
-                        bgcolor: "common.green",
-                        color: "green.700"
-                    }
-                }
-            >
-                <Container maxWidth="md" sx={{py: 3}}>
-
-                </Container>
-            </Box> */}
         </>
     );
 }

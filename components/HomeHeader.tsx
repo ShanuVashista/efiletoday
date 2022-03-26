@@ -119,7 +119,7 @@ const HomeHeader = () => {
                         
                     }
                 </Grid>
-                <Grid container alignItems="center" justifyContent={"space-between"}>
+                <Grid container alignItems="center" wrap="nowrap" justifyContent={"space-between"}>
                     {
                         links.map((link, i) => <Grid key={i} className="p-2">
                             <Button className="text-white">
@@ -135,7 +135,7 @@ const HomeHeader = () => {
                     <Grid item xs={2} >
                         <Button
                             variant="contained"
-                            size="large"
+                            size="small"
                             className="shadow-none"
                             style={
                                 {
@@ -144,7 +144,7 @@ const HomeHeader = () => {
                                 }
                             }
                         >
-                            <Typography fontSize="small">Login/Register</Typography>
+                            Login/Register
                         </Button>
                     </Grid>
                 </Grid>
