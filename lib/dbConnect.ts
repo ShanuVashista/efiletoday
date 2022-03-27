@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const MONGODB_URI = process.env.MONGODB_URI;
+const MONGODB_URI = "mongodb://localhost:27017/efiletoday";
 
 declare global {
     // eslint-disable-next-line no-var
@@ -27,7 +27,7 @@ async function dbConnect (){
     if (cached.conn){
         return cached.conn;
     }
-
+    
     if (!cached.promise){
         cached.promise = mongoose.connect(MONGODB_URI).then(mongoose => {
             return mongoose;

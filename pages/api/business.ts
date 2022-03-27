@@ -1,5 +1,5 @@
 import dbConnect from "../../lib/dbConnect";
-import User from "../../models/User";
+import Business from "../../models/Business.model";
 import type {NextApiRequest, NextApiResponse} from "next";
 
 export default async function handler (
@@ -9,33 +9,35 @@ export default async function handler (
     const {method} = req;
     await dbConnect();
 
-    switch (method){
+    switch(method){
         case "GET":
-            try {
-                const users = await User.find({});
+            try{
+                const business = await Business.find({});
 
                 res.status(200).json({
                     success: true,
-                    data: users
+                    data: business
                 });
-            } catch (error){
+            }catch(err){
                 res.status(400).json({success: false});
             }
 
             break;
+            
         case "POST":
-            try {
-                const user = await User.create(req.body);
-
+            try{
+                const newBusiness = await Business.create(req.body);
+                
                 res.status(201).json({
                     success: true,
-                    data: user
+                    data: newBusiness
                 });
-            } catch (error){
+            }catch(err){
                 res.status(400).json({success: false});
             }
 
             break;
+            
         default:
             res.status(400).json({success: false});
             break;

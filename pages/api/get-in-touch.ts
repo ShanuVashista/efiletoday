@@ -1,22 +1,25 @@
-import dbConnect from "../../lib/dbConnect";
-import User from "../../models/User";
+
 import type {NextApiRequest, NextApiResponse} from "next";
+import dbConnect from "../../lib/dbConnect";
+import ContactUs from "../../models/ContactUsMsg.model";
 
 export default async function handler (
-    req: NextApiRequest,
-    res: NextApiResponse
+    req:NextApiRequest,
+    res:NextApiResponse
 ){
     const {method} = req;
     await dbConnect();
+    // console.log("working");
 
-    switch (method){
+    switch(method){
         case "GET":
             try {
-                const users = await User.find({});
+                const ContactUsMsg = await ContactUs.find({});
 
                 res.status(200).json({
                     success: true,
-                    data: users
+                    data: ContactUsMsg,
+                    message: "Data fetched from mongodb"
                 });
             } catch (error){
                 res.status(400).json({success: false});
@@ -25,11 +28,11 @@ export default async function handler (
             break;
         case "POST":
             try {
-                const user = await User.create(req.body);
+                const contactUsMsg = await ContactUs.create(req.body);
 
                 res.status(201).json({
                     success: true,
-                    data: user
+                    data: contactUsMsg
                 });
             } catch (error){
                 res.status(400).json({success: false});
