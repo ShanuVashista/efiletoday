@@ -26,8 +26,9 @@ export default async function handler (
             
         case "POST":
             try{
-                const newBusiness = await Business.create(req.body);
-                
+                const newBusiness = new Business(req.body);
+                await newBusiness.save();
+
                 res.status(201).json({
                     success: true,
                     data: newBusiness
