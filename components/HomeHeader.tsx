@@ -5,6 +5,9 @@ import {BsFillTelephoneFill} from "react-icons/bs";
 import {HiOutlineMailOpen} from "react-icons/hi";
 import React from "react";
 import {Search} from "react-feather";
+import {AiOutlineTwitter, AiOutlineInstagram} from "react-icons/ai";
+import {FaFacebookF} from "react-icons/fa";
+import {RiLinkedinFill} from "react-icons/ri";
 
 const HomeHeader = () => {
     const links = [
@@ -30,6 +33,25 @@ const HomeHeader = () => {
         },
         {
             label: "Contact",
+            href: ""
+        },
+    ];
+
+    const socialIcon = [
+        {
+            icon: <AiOutlineTwitter fill="#32CD32" fontSize="small" />,
+            href: ""
+        },
+        {
+            icon: <AiOutlineInstagram fill="#32CD32" fontSize="small" />,
+            href: ""
+        },
+        {
+            icon: <FaFacebookF fill="#32CD32" fontSize="small" />,
+            href: ""
+        },
+        {
+            icon: <RiLinkedinFill fill="#32CD32" fontSize="small" />,
             href: ""
         },
     ];
@@ -61,19 +83,41 @@ const HomeHeader = () => {
                 <Image src={logo} height={100} width={120}/>
             </Grid>
             <Grid container direction="column" wrap="nowrap" item xs>
-                <Grid container className="p-2 text-white">
-                    <Grid container wrap="nowrap" className="w-auto p-2" alignItems="center">
-                        <BsFillTelephoneFill/>
-                        <Typography component={"a"} href={"tel:'+14146906435'"} style={{marginLeft: ".5rem"}}>
+                <Grid container wrap="nowrap" alignItems="center" className="p-2 text-white">
+                    <Grid item xs container>
+                        <Grid container wrap="nowrap" className="w-auto p-2" alignItems="center">
+                            <BsFillTelephoneFill/>
+                            <Typography component={"a"} href={"tel:'+14146906435'"} style={{marginLeft: ".5rem"}}>
                             +1 (414) 690-6435 |
-                        </Typography>
-                    </Grid>
-                    <Grid container wrap="nowrap" className="w-auto p-2" alignItems="center">
-                        <HiOutlineMailOpen fontSize="large"/>
-                        <Typography component={"a"} href={"mailto:'info@efiletoday.com'"} style={{marginLeft: ".5rem"}}>
+                            </Typography>
+                        </Grid>
+                        <Grid container wrap="nowrap" className="w-auto p-2" alignItems="center">
+                            <HiOutlineMailOpen fontSize="large"/>
+                            <Typography component={"a"} href={"mailto:'info@efiletoday.com'"} style={{marginLeft: ".5rem"}}>
                             info@efiletoday.com
-                        </Typography>
+                            </Typography>
+                        </Grid>
                     </Grid>
+                    {
+                        socialIcon.map((icon, i) => <Grid key={i} className="p-1">
+                            <Grid
+                                container alignItems="center" justifyContent="center"
+                                className="p-1" style={
+                                    {
+                                        borderColor: "white",
+                                        borderWidth: 1,
+                                        borderStyle: "solid",
+                                        borderRadius: "50%",
+                                        height: 30,
+                                        width: 30,
+                                    }
+                                }
+                            >
+                                {icon.icon}
+                            </Grid>
+                        </Grid>)
+                        
+                    }
                 </Grid>
                 <Grid container alignItems="center" wrap="nowrap" justifyContent={"space-between"}>
                     {
