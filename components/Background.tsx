@@ -7,14 +7,14 @@ import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import {IoSend} from "react-icons/io5";
 
-const TaxPage1 = ({component}: any) => {
+const Background = ({component}: any) => {
     return (
         <Grid container direction="column" wrap="nowrap">
             <Grid
                 container
                 alignItems="center"
                 justifyContent="center"
-                className="banner-container p-5 main-container"
+                className="banner-container main-container"
                 style={
                     {
                         background: "url('/Group 3.png') no-repeat",
@@ -23,33 +23,9 @@ const TaxPage1 = ({component}: any) => {
                     }
                 }
             >
-                <Grid container justifyContent="center" className="pb-5 mb-5" style={{boxSizing: "border-box"}}>
-                    <HomeHeader/>
-                </Grid>
-                <Grid container justifyContent="center" className="p-5 pb-0 w-auto" style={{boxSizing: "border-box"}}>
+                <Grid container justifyContent="center" className="pb-0 w-auto" style={{boxSizing: "border-box"}}>
                     {component}
                 </Grid>
-                <Box
-                    sx={
-                        {
-                            bgcolor: "#85Bc3c",
-                            borderRadius: 1
-                        }
-                    }
-                >
-                    <Container sx={{py: 1}}>
-                        <Typography color="white" fontSize="small">
-                            You are filling form 2290 for the Tax year 2021-22.Ensure that you select the correct at the top, in case you want to file for some other TAX YEAR.
-                        </Typography>
-                    </Container>
-                </Box>
-                <br/>
-                <Button
-                    className="m-5" variant="contained" style={{backgroundColor: "#85Bc3c"}}
-                >Previous Step</Button>
-                <Button
-                    variant="contained" style={{backgroundColor: "#336FBF"}}
-                >Next Step</Button>
             </Grid>
             <Grid container wrap="nowrap" direction="column">
                 <Grid item xs className="pb-3">
@@ -124,4 +100,4 @@ const TaxPage1 = ({component}: any) => {
     );
 };
 
-export default TaxPage1;
+export default Background;
