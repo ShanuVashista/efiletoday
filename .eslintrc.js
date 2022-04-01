@@ -135,6 +135,7 @@ module.exports = {
             before: false,
             after: true
         }],
-        "quote-props": ["error", "as-needed"]
+        "quote-props": ["error", "as-needed"],
+        "@typescript-eslint/no-explicit-any": ["off"]
     }
 };
