@@ -1,11 +1,5 @@
-import {Grid, Button, Card, CardContent} from "@mui/material";
+import {Grid} from "@mui/material";
 import React from "react";
-import Header from "./Header";
-import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import Box from "@mui/material/Box";
-import {IoSend} from "react-icons/io5";
 
 const Background = ({component}: any) => {
     return (

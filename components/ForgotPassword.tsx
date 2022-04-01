@@ -1,7 +1,5 @@
 import * as React from "react";
 import {Button, Card, CardContent, Grid, TextField, Typography} from "@mui/material";
-import Link from "next/link";
-import {Box} from "@mui/system";
 
 const ForgotPassword = () => {
     return (
