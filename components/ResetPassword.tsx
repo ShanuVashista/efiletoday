@@ -7,12 +7,12 @@ const ResetPassword = () => {
         <>
             <Grid container direction="column">
                 <Grid container justifyContent="center">
-                    <Typography color="white" fontWeight="normal" fontSize="xx-large">
+                    <Typography color="white" fontWeight="normal" fontSize="x-large">
                         Reset Password
                     </Typography>
                 </Grid>
                 <Grid container>
-                    <Box minWidth={500} style={{backgroundColor: "white"}} className="p-3 pb-2">
+                    <Box minWidth={300} style={{backgroundColor: "white"}} className="p-3 pb-2">
                         <Grid item>
                             <Typography>New Password</Typography>
                             <TextField
