@@ -75,7 +75,7 @@ export default async function handler (
 
             break;
         default:
-            res.status(400).json({successads: false});
+            res.status(400).json({success: false});
             break;
     }
 }
