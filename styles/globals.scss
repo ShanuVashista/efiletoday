@@ -30,6 +30,17 @@ a {
   }
 }
 
+.header-link{
+  color: #ffffff;
+  @media screen and (min-width: 767px) {
+    font-size: 12px;
+  }
+  @media screen and (max-width: 766px) {
+    font-size: 16px;
+    justify-content: flex-start;
+  }
+}
+
 * {
   font-family: 'Poppins', sans-serif !important;
   box-sizing: border-box;
@@ -53,6 +64,7 @@ a {
   padding: 50px;
   position: absolute;
 
+}
   .overlay-form {
     input {
       background: white;
@@ -63,17 +75,6 @@ a {
     }
   }
 
-  &.with-cta {
-    left: 50px;
-    width: 50%;
-    padding: 50px 80px;
-    @media screen and (min-width: 1500px) {
-      left: 17% !important;
-      width: 35%;
-    }
-  }
-}
-
 .start-container {
   padding-bottom: 80px !important;
   background: url("/how-to-start.jpg") no-repeat;
@@ -82,8 +83,11 @@ a {
 
 .start-card-container {
   background: white;
-  padding: 50px;
-  min-height: 350px
+  min-height: 300px;
+  @media screen and (min-width: 1023px){
+    padding: 50px;
+    min-height: 350px;
+  }
 }
 
 .custom-form {
@@ -95,6 +99,12 @@ a {
   fieldset {
     border: none !important;
   }
+  &.with-white{
+    input, textarea {
+      color: #0072BA;
+      background: white;
+    }
+  }
 }
 
 .banner-title {
@@ -104,4 +114,38 @@ a {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+}
+
+.advantage-container{
+  background: url("/cta.jpg") no-repeat;
+  background-size: cover;
+  .with-cta {
+    padding: 50px 80px;
+    background: rgba(0, 0, 0, .25);
+    @media screen and (max-width: 1023px) {
+      left: 0;
+      width: 100%;
+      padding: 12px;
+    }
+    @media screen and (min-width: 1500px) {
+      left: 17% !important;
+      width: 35%;
+    }
+  }
+}
+
+.footer-container{
+  background: url("/footer.png") no-repeat;
+  background-position: right top;
+  background-size: 340px;
+  @media screen and (max-width: 1024px) {
+    background-position: right bottom;
+  }
+  @media screen and (max-width: 400px) {
+    padding-bottom: 200px !important;
+  }
+}
+
+.banner-container{
+  padding-top: 150px !important;
 }

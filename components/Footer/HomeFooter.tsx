@@ -1,234 +1,169 @@
-import {Avatar, Button, Grid, List, ListItem, ListItemAvatar} from "@mui/material";
+import {Button, Grid, TextField} from "@mui/material";
 import React from "react";
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import Stack from "@mui/material/Stack";
-import MapIcon from "@mui/icons-material/Map";
-import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
-import DraftsRoundedIcon from "@mui/icons-material/DraftsRounded";
+import {Mail, PhoneCall} from "react-feather";
+import {AiOutlineInstagram, AiOutlineTwitter} from "react-icons/ai";
+import {FaFacebookF} from "react-icons/fa";
+import {RiLinkedinFill} from "react-icons/ri";
 
 function HomeFooter (){
-    return (
-        <>
-            <Box
-                sx={
-                    {
-                        bgcolor: "common.black",
-                        color: "grey.700"
-                    }
-                }
-            >
-                <Container sx={{py: 12}}>
-                    <Grid container spacing={4} color={"white"}>
-                        <Grid item xs={12} md={3}>
-                            <Stack spacing={2}>
-                                <Typography variant="h6" color={"whitesmoke"}>
-                            CONTACT US
-                                </Typography>
-                                <List>
-                                    <ListItem>
-                                        <ListItemAvatar>
-                                            <Avatar>
-                                                <MapIcon />
-                                            </Avatar>
-                                        </ListItemAvatar>
-                                        <Typography variant="subtitle2" component="a" href="#">
-                                    123, Main Street Milwaukee - USA
-                                        </Typography>
-                                    </ListItem>
-                                </List>
-                                <List>
-                                    <ListItem>
-                                        <ListItemAvatar>
-                                            <Avatar>
-                                                <PhoneRoundedIcon />
-                                            </Avatar>
-                                        </ListItemAvatar>
-                                        <Typography variant="subtitle2" component="a" href="#">
-                                    +1(414)690-643
-                                        </Typography>
-                                    </ListItem>
-                                </List>
-                                <List>
-                                    <ListItem>
-                                        <ListItemAvatar>
-                                            <Avatar>
-                                                <DraftsRoundedIcon />
-                                            </Avatar>
-                                        </ListItemAvatar>
-                                        <Typography variant="body1" component="a" href="#">
-                                    info@efiletoday.com
-                                        </Typography>
-                                    </ListItem>
-                                    <ListItem>
-                                        <Grid className="p-2">
-                                            <img src="/Fin_E-fileLogo.png" style={{width: 100}}/>
-                                        </Grid>
-                                    </ListItem>
-                                </List>
-                            </Stack>
-                        </Grid>
-                        <Grid item xs={12} md={4}>
-                            <Stack spacing={2}>
-                                <Typography variant="h6" color={"whitesmoke"}>
-                            NEWSLETTER
-                                </Typography>
-                                <List>
-                                    <ListItem>
-                                       
-                                        <small>efile today empoweree diling services</small>
-                                         
-                                    </ListItem>
-                                    <ListItem >
-                                        <input></input>
-                                        {/* <TextField
-                            fullWidth
-                            className="rounded-0"
-                            placeholder="Your Email Address"
-                            variant="outlined"
-                        /> */}
-                                        
-                                    </ListItem>
-                                    <ListItem>
-                                        <small>efile today empowered filing services procedures for reliabel filing hub.</small>
-                                    </ListItem>
-                                    <ListItem>
-                                        <Grid className="p-2">
-                                            <Button
-                                                variant="contained"
-                                                size="small"
-                                                className="shadow-none"
-                                                style={
-                                                    {
-                                                        background: "linear-gradient(90deg, #0072BA , #99c928 60%)",
-                                                        textTransform: "unset"
-                                                    }
-                                                }
-                                            >
-                                                Subscribe
-                                            </Button>
-                                        </Grid>
-                                    </ListItem>
-                                </List>
-                                <List>
-                                    <ListItem>
-                                        
-                                        <Typography variant="h5">
-                                            <strong> About Us</strong>
-                                        </Typography>
-                                    </ListItem>
-                                    <ListItem>
-                                        <small>efile today empowered filing services procedures for reliable filing hug. E-file today empowered filing services procedures for reliable filing hub</small>
-                                    </ListItem>
-                                </List>
-                            </Stack>
-                        </Grid>
-                        <Grid item xs={12} md={3}>
-                            <Stack spacing={2}>
-                                <Typography variant="h6" color={"whitesmoke"}>
-                                     PRODUCT & SERVICES
-                                </Typography>
-                                <List>
-                                    <ListItem>
-                                        
-                                        <Typography variant="subtitle2" component="a" href="#">
-                                                efile Form 2290
-                                        </Typography>
-                                    </ListItem>
-                                    <ListItem>
-                                        
-                                        <Typography variant="subtitle2" component="a" href="#">
-                                                efile 2290 by Phone
-                                        </Typography>
-                                    </ListItem>
-                                    <ListItem>
-                                        
-                                        <Typography variant="subtitle2" component="a" href="#">
-                                                Free VIN Correction
-                                        </Typography>
-                                    </ListItem>
-                                    <ListItem>
-                                        
-                                        <Typography variant="subtitle2" component="a" href="#">
-                                                Claim 2290 Tax Refund
-                                        </Typography>
-                                    </ListItem>
-                                    <ListItem>
-                                        
-                                        <Typography variant="subtitle2" component="a" href="#">
-                                                2290 State Filing
-                                        </Typography>
-                                    </ListItem>
-                                    <ListItem>
-                                        
-                                        <Typography variant="subtitle2" component="a" href="#">
-                                                Apply for EIN
-                                        </Typography>
-                                    </ListItem>
-                                    <ListItem>
-                                        <Grid className="p-2">
-                                            <img src="/irs.png" style={{width: 100}}/>
-                                        </Grid>
-                                    </ListItem>
-                                </List>
-                            </Stack> 
-                        </Grid>
-                        <Grid item xs={12} md={2}>
-                            <Grid className="p-2">
-                                <img src="/footer.png" style={{width: 200}}/>
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                </Container>
-            </Box>
+    const socialIcon = [
+        {
+            icon: <AiOutlineTwitter fill="#32CD32" fontSize="small" />,
+            href: ""
+        },
+        {
+            icon: <AiOutlineInstagram fill="#32CD32" fontSize="small" />,
+            href: ""
+        },
+        {
+            icon: <FaFacebookF fill="#32CD32" fontSize="small" />,
+            href: ""
+        },
+        {
+            icon: <RiLinkedinFill fill="#32CD32" fontSize="small" />,
+            href: ""
+        },
+    ];
 
-            <Box
-                sx={
-                    {
-                        bgcolor: "#85Bc3c",
-                        color: "#FFFFFF"
-                    }
-                }
-            >
-                <Container sx={{py: 3}}>
-                    <Grid container spacing={5} color={"white"}>
-                        <Grid item xs={12} md={5}>
-                            <Stack spacing={2}>
-                                <Typography>
-                            Privacy Police
-                            |
-                            News
-                            |
-                            FAQ
-                            |
-                            Support
-                        
-                                </Typography>
-                       
-                            </Stack>
+    return (
+        <Grid container justifyContent="space-around" className="p-2 p-md-4 bg-black text-white footer-container">
+            <Grid item xs={12} sm={6} lg={3}>
+                <Grid container direction="column" wrap="nowrap">
+                    <Typography variant="h6" className="p-2 text-uppercase">
+                        Contact Us
+                    </Typography>
+                    <Grid container alignItems="center" className="p-2">
+                        <Grid className="p-1" item xs={2}>
+                            <img src="/map-icon.png"/>
                         </Grid>
-                        <Grid item xs={12} md={7}>
-                            <Typography>
-                            Home
-                            |
-                            About Us
-                            |
-                            Contact Us
-                            |
-                            Privacy Policy
-                            |
-                            Cookie Policy
-                            |
-                            Term & Condition
-                        
-                            </Typography>
+                        <Typography variant="subtitle2" component={Grid} item xs className="p-1">
+                            123, Main Street Milwaukee - USA
+                        </Typography>
+                    </Grid>
+                    <Grid container alignItems="center" className="p-2">
+                        <Grid className="p-1" item xs={2}>
+                            <PhoneCall color="#85bc3c"/>
+                        </Grid>
+                        <Typography variant="subtitle2" component={Grid} item xs className="p-1">
+                            +1(414)690-643
+                        </Typography>
+                    </Grid>
+                    <Grid container alignItems="center" className="p-2">
+                        <Grid className="p-1" item xs={2}>
+                            <Mail color="#85bc3c"/>
+                        </Grid>
+                        <Typography variant="subtitle2" component={Grid} item xs className="p-1">
+                            info@efiletoday.com
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12} className="p-3">
+                        <img src="/logo.png" style={{width: 150}}/>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <Grid item xs={12} sm={6} lg={3}>
+                <Grid container direction="column" wrap="nowrap">
+                    <Typography variant="h6" className="p-2 text-uppercase">
+                        NewsLetter
+                    </Typography>
+                    <Typography variant="subtitle2" component={Grid} item xs className="p-2">
+                        efile today empowered filing services
+                    </Typography>
+                    <Grid className="p-2 custom-form with-white">
+                        <TextField
+                            fullWidth
+                            size="small"
+                            className="rounded-0"
+                            placeholder="Email"
+                            variant="outlined"
+                        />
+                    </Grid>
+                    <Typography variant="subtitle2" component={Grid} item xs className="p-2">
+                        efile today empowered filing services producers for reliable filing hub.
+                    </Typography>
+                    <Grid container wrap="nowrap" alignItems="center" className="p-2">
+                        <Grid item xs className="p-1">
+                            <Button
+                                variant="contained"
+                                className="shadow-none"
+                                style={{background: "#99c928"}}
+                            >
+                                Subscribe
+                            </Button>
+                        </Grid>
+                        <Grid className="w-auto" container alignItems="center">
+                            {
+                                socialIcon.map((icon, i) => <Grid key={i} className="p-1">
+                                    <Grid
+                                        container alignItems="center" justifyContent="center"
+                                        className="p-1" style={
+                                            {
+                                                borderColor: "white",
+                                                borderWidth: 1,
+                                                borderStyle: "solid",
+                                                borderRadius: "50%",
+                                                height: 30,
+                                                width: 30,
+                                            }
+                                        }
+                                    >
+                                        {icon.icon}
+                                    </Grid>
+                                </Grid>)
+
+                            }
                         </Grid>
                     </Grid>
-                    
-                </Container>
-            </Box>
-        </>
+                    <Typography variant="h6" component={Grid} item xs={12} className="p-2 font-weight-bold">
+                        About Us
+                    </Typography>
+                    <Typography variant="subtitle2" component={Grid} item xs={12} className="p-2">
+                        efile today empowered filing services producers for reliable filing hub.
+                    </Typography>
+                </Grid>
+            </Grid>
+            <Grid item xs={12} lg={3}>
+                <Grid container direction="column" wrap="nowrap">
+                    <Typography variant="h6" className="p-2 text-uppercase">
+                        Product & services
+                    </Typography>
+                    <Grid container alignItems="center" className="p-2">
+                        <Button className="text-white">
+                            EFile form 2290
+                        </Button>
+                    </Grid>
+                    <Grid container alignItems="center" className="p-2">
+                        <Button className="text-white">
+                            EFile 2290 by phone
+                        </Button>
+                    </Grid>
+                    <Grid container alignItems="center" className="p-2">
+                        <Button className="text-white">
+                            Free VIN Correction
+                        </Button>
+                    </Grid>
+                    <Grid container alignItems="center" className="p-2">
+                        <Button className="text-white">
+                            Claim 2290 Tax Refund
+                        </Button>
+                    </Grid>
+                    <Grid container alignItems="center" className="p-2">
+                        <Button className="text-white">
+                            2290 State filing
+                        </Button>
+                    </Grid>
+                    <Grid container alignItems="center" className="p-2">
+                        <Button className="text-white">
+                            Apply For En
+                        </Button>
+                    </Grid>
+                    <Grid container alignItems="center" className="p-3">
+                        <img src={"/irs-logo-light.png"}/>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
     );
 }
 
