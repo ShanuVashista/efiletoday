@@ -15,7 +15,7 @@ const Header = () => {
     const links = [
         {
             label: "Home",
-            href: ""
+            href: "/"
         },
         {
             label: "File",
@@ -91,7 +91,7 @@ const Header = () => {
                     }
                 }
             >
-                <Image src={logo} height={100} width={120}/>
+                <a href="/"><Image src={logo} height={100} width={120}/></a>
             </Grid>
             <Grid container direction="column" wrap="nowrap" item xs>
                 <Grid container wrap="nowrap" alignItems="center" justifyContent="space-between" className="p-2 text-white">
@@ -173,6 +173,7 @@ const Header = () => {
                                     textTransform: "unset"
                                 }
                             }
+                            href="/login"
                         >
                             Login/Register
                         </Button>
