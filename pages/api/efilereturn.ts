@@ -1,18 +1,16 @@
-
-import type { NextApiRequest, NextApiResponse } from "next";
+import type {NextApiRequest, NextApiResponse} from "next";
 import dbConnect from "../../lib/dbConnect";
 import Ereturn from "../../models/EfileReturn.model";
 
-export default async function handler(
+export default async function handler (
     req: NextApiRequest,
     res: NextApiResponse
-) {
-    const { method } = req;
+){
+    const {method} = req;
     await dbConnect();
-    // console.log("working");
 
-    switch (method) {
-        case "POST":
+    switch (method){
+        case "POST": 
             try {
                 const contactUsMsg = await Ereturn.create(req.body);
 
@@ -20,7 +18,7 @@ export default async function handler(
                     success: true,
                     data: contactUsMsg
                 });
-            } catch (error) {
+            } catch (error:any){
                 res.status(400).json({
                     success: false,
                     message: error.message
@@ -29,7 +27,7 @@ export default async function handler(
 
             break;
         default:
-            res.status(400).json({ success: false });
+            res.status(400).json({success: false});
             break;
     }
 }

@@ -1,4 +1,3 @@
-
 import type {NextApiRequest, NextApiResponse} from "next";
 import dbConnect from "../../lib/dbConnect";
 import Purchase from "../../models/vehiclePurchaser.model";
@@ -34,8 +33,11 @@ export default async function handler (
                     success: true,
                     data: purchase
                 });
-            } catch (error){
-                res.status(400).json({success: false, message: error.message});
+            } catch (error:any){
+                res.status(400).json({
+                    success: false,
+                    message: error.message
+                });
             }
 
             break;
