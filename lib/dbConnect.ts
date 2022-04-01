@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const MONGODB_URI = "mongodb://localhost:27017/efiletoday";
+const MONGODB_URI = "mongodb://SohamDB:Pa$$w(2)Rd22@localhost:27017/efiletoday?authSource=admin";
 
 declare global {
     // eslint-disable-next-line no-var
