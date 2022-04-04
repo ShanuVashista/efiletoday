@@ -1,141 +1,50 @@
-import mongoose, {Schema} from "mongoose";
+import mongoose from "mongoose";
+import DateTimeFormat = Intl.DateTimeFormat;
 
-// We can also use specific Schema for these Fields if we need specific Id for these.
 
-// const BusinessAddressSchema = new Schema({
-//     addline1: {
-//         type: String,
-//         required: true,
-//         minlength: 8
-//     },
-//     addline2: {type: String},
-//     country: {
-//         type: String,
-//         required: true
-//     },
-//     state: {
-//         type: String,
-//         required: true
-//     },
-//     city: {
-//         type: String,
-//         required: true,
-//     },
-//     zip: {
-//         type: String,
-//         required: true
-//     }
-// });
 
-// const SigningAutheritySchema = new Schema({
-//     name: {
-//         type: String,
-//         required: true
-//     },
-//     title: {
-//         type: String,
-//         required: true
-//     },
-//     email: {
-//         type: String,
-//         required: true
-//     },
-//     phone: {
-//         type: String,
-//         required: true
-//     }
-
-// });
-
-// const PointOfContactSchema = new Schema ({
-//     userName: {
-//         type: String,
-//         required: true
-//     },
-//     userEmail: {
-//         type: String,
-//         required: true,
-//     },
-//     userPhone: {
-//         type: String,
-//         required: true
-//     }
-// });
-
-const BusinessSchema = new Schema({
-   
-    businessName: {
-        type: String,
-        required: true,
-        maxlength: 100
+const lossEventStolen = new mongoose.Schema({
+    vin:{
+        type:String,
+        required:true
     },
-    nameControl: {type: String},
-    einNo: {
-        type: String,
-        required: true,
+    taxPaidDate:{
+        type:{
+            type:String,
+            required:true
+        },
+        month:{
+            type:Date,
+            required:true,
+            min:"1999-01-01",
+            max:"2020-01-01"
+        },
     },
-    businessType: {
-        type: String,
-        required: true,
-    },
-    businessAdd: {
-        addline1: {
-            type: String,
-            required: true,
-            minlength: 8
-        },
-        addline2: {type: String},
-        country: {
-            type: String,
-            required: true
-        },
-        state: {
-            type: String,
-            required: true
-        },
-        city: {
-            type: String,
-            required: true,
-        },
-        zip: {
-            type: String,
-            required: true
-        }
-    },
-    signingAuth: {
-        name: {
-            type: String,
-            required: true
-        },
-        title: {
-            type: String,
-            required: true
-        },
-        email: {
-            type: String,
-            required: true
-        },
-        phone: {
-            type: String,
-            required: true
-        }
-    },
-    pointOfContact: {
-        userName: {
-            type: String,
-            required: true
-        },
-        userEmail: {
-            type: String,
-            required: true,
-        },
-        userPhone: {
-            type: String,
-            required: true
-        }
-    },
-    businessPhone: {type: String},
-}, {timestamps: true});
+    stolenOn :{
+        type:Date,
+        required:true
 
-const model = mongoose.models.Business || mongoose.model("Business", BusinessSchema);
+    },
+    taxableGrossWeight :{
+            type:String,
+            required:true
+
+    },
+    usedForLogging:{
+        type:Boolean,
+
+    },
+    explanation:{
+        type:String,
+        required:true
+    },
+    file:{
+        type:String,
+        required:true
+    }
+
+
+})
+
+const model = mongoose.models.lossEventStolen || mongoose.model("loss-event-stolen", lossEventStolen);
 export default model;

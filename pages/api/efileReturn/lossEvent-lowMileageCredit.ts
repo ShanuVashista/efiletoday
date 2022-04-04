@@ -1,9 +1,9 @@
 import dbConnect from "../../../lib/dbConnect";
 import mongoose from "mongoose"
-import lossEventStolen from "../../../models/efileReturn/loss-event-stolen.model";
+import lossEventLowMileageCredit from "../../../models/efileReturn/loss-event-lowMileageCredit.model";
 import type {NextApiRequest, NextApiResponse} from "next";
-import Business from "../../../models/Business.model";
-import TaxRefund from "../../../models/TaxRefund";
+// import Business from "../../../models/Business.model";
+// import TaxRefund from "../../../models/TaxRefund";
 
 export default async function handler (
     req: NextApiRequest,
@@ -18,11 +18,11 @@ export default async function handler (
         case "GET":
 
             try{
-                const lossEventstolen = await lossEventStolen.find({});
+                const lossEventlowMileageCredit = await lossEventLowMileageCredit.find({});
 
                 res.status(200).json({
                     success: true,
-                    data: lossEventstolen
+                    data: lossEventlowMileageCredit
                 });
             }catch(err){
                 res.status(400).json({success: false});
@@ -31,15 +31,15 @@ export default async function handler (
             break;
 
 
-            
+
         case "POST":
 
             try {
-                const newLossEventStolen = await lossEventStolen.create(req.body);
+                const newLossEventlowMileageCredit = await lossEventLowMileageCredit.create(req.body);
 
                 res.status(201).json({
                     success: true,
-                    data: newLossEventStolen
+                    data: newLossEventlowMileageCredit
                 });
             } catch (error: unknown){
                 if (error instanceof mongoose.Error.ValidationError){
@@ -57,18 +57,18 @@ export default async function handler (
         case "PUT":
             try{
                 const _id= req.body._id;
-                const newlossEventstolen = await lossEventStolen.findByIdAndUpdate(_id, req.body, {
+                const newlossEventlowMileageCredit = await lossEventLowMileageCredit.findByIdAndUpdate(_id, req.body, {
                     new: true,
                     runValidators: true
                 });
 
-                if(!newlossEventstolen){
+                if(!newlossEventlowMileageCredit){
                     return res.status(400).json({success: false});
                 }
 
                 res.status(200).json({
                     success: true,
-                    data: newlossEventstolen
+                    data: newlossEventlowMileageCredit
                 });
             }catch (error: unknown){
                 if (error instanceof mongoose.Error.ValidationError){
@@ -85,15 +85,15 @@ export default async function handler (
         case "DELETE":
             try{
                 const _id= req.body._id;
-                const deletelossEventstolen = await lossEventStolen.deleteOne({_id: _id});
+                const deletelossEventlowMileageCredit = await lossEventLowMileageCredit.deleteOne({_id: _id});
 
-                if(!deletelossEventstolen){
+                if(!deletelossEventlowMileageCredit){
                     return res.status(400).json({success: false});
                 }
 
                 res.status(200).json({
                     success: true,
-                    data: deletelossEventstolen,
+                    data: deletelossEventlowMileageCredit,
                     message: "Deleted Successful"
                 });
             }catch(err){
@@ -101,7 +101,7 @@ export default async function handler (
             }
             break;
 
-            
+
         default:
             res.status(400).json({success: false});
             break;
