@@ -1,6 +1,6 @@
 import dbConnect from "../../lib/dbConnect";
 import mongoose from "mongoose";
-import TaxRefund from "../../models/TaxRefund";
+import SingleTruck from "../../models/singletruck.model";
 import type {NextApiRequest, NextApiResponse} from "next";
 
 export default async function handler (
@@ -13,11 +13,11 @@ export default async function handler (
     switch (method){
         case "GET":
             try {
-                const taxRefunddetails = await TaxRefund.find();
+                const singleTruck = await SingleTruck.find();
 
                 res.status(200).json({
                     success: true,
-                    data: taxRefunddetails
+                    data: singleTruck
                 });
             } catch (error){
                 res.status(400).json({success: false});
@@ -26,11 +26,11 @@ export default async function handler (
             break;
         case "POST":
             try {
-                const taxRefund = await TaxRefund.create(req.body);
+                const singleTruck = await SingleTruck.create(req.body);
 
                 res.status(201).json({
                     success: true,
-                    data: taxRefund
+                    data: singleTruck
                 });
             } catch (error: unknown){
                 if (error instanceof mongoose.Error.ValidationError){

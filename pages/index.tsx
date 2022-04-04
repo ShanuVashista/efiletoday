@@ -3,7 +3,6 @@ import {Accordion, AccordionDetails, AccordionSummary, Button, Grid, TextField, 
 import React from "react";
 import {Plus} from "react-feather";
 import HomeFooter from "../components/Footer/HomeFooter";
-import HomeHeader from "../components/HomeHeader";
 
 const Home: NextPage = () => {
     const fileData = [
@@ -77,16 +76,14 @@ const Home: NextPage = () => {
                 container
                 alignItems="center"
                 justifyContent="center"
-                className="banner-container p-5 main-container"
+                className="banner-container p-2 p-md-5 main-container"
                 style={
                     {
                         background: "url('/banner.png') no-repeat",
                         backgroundSize: "cover",
-                        paddingTop: "110px !important"
                     }
                 }
             >
-                <HomeHeader/>
                 <Grid item container direction="column" wrap="nowrap" xs={12} md={6} lg={5} className="p-2 p-lg-5">
                     <Typography variant="h2" className="font-weight-bold text-white banner-title p-2" style={{textShadow: "0 1px 2px black"}}>
                         <span>File</span> IRS Form <br/> 2290 <span>Online</span>
@@ -137,7 +134,7 @@ const Home: NextPage = () => {
             <Grid
                 container
                 alignItems="center"
-                className="banner-container p-5 main-container"
+                className="banner-container p-2 p-md-5 main-container"
                 style={
                     {
                         background: "url('/file-bg.jpg') no-repeat",
@@ -189,7 +186,7 @@ const Home: NextPage = () => {
                     <img src="/file-truck.png" className="w-100"/>
                 </Grid>
             </Grid>
-            <Grid container justifyContent="center" style={{background: "#0A4970"}} className="p-5 main-container">
+            <Grid container justifyContent="center" style={{background: "#0A4970"}} className="p-2 p-md-5 main-container">
                 <Typography component={Grid} item xs={12} className="p-3 text-center font-weight-bold text-white" variant="h4">
                     What <span style={{color: "#85bc3c"}}>efile today</span> Provides You
                 </Typography>
@@ -199,7 +196,7 @@ const Home: NextPage = () => {
                             item
                             key={i}
                             className="p-2"
-                            xs sm={6} md={4}
+                            xs={12} sm={6} md={4}
                         >
                             <Grid
                                 className="p-4 pl-5 pr-5 text-center rounded"
@@ -235,13 +232,12 @@ const Home: NextPage = () => {
                     }
                 </Grid>
             </Grid>
-            <Grid container className="position-relative main-container">
-                <img src={"/cta.jpg"} className="w-100"/>
-                <Grid container direction="column" justifyContent="center" wrap="nowrap" className="overlay-container with-cta">
-                    <Typography variant="h5" className="font-weight-bold text-white p-2">
+            <Grid container className="position-relative main-container advantage-container">
+                <Grid container alignItems="center" className="with-cta">
+                    <Typography component={Grid} item xs={12} md={7} variant="h5" className="font-weight-bold text-white p-2">
                         Take advantage of these features and begin filling your form 2290 now
                     </Typography>
-                    <Grid container wrap="nowrap" className="overlay-form p-2">
+                    <Grid item xs={12} md={7} container wrap="nowrap" className="overlay-form p-2">
                         <TextField
                             fullWidth
                             className="rounded-0"
@@ -265,13 +261,13 @@ const Home: NextPage = () => {
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid container direction="column" justifyContent="center" alignItems="center" wrap="nowrap" className="start-container p-5 main-container">
+            <Grid container direction="column" justifyContent="center" alignItems="center" wrap="nowrap" className="start-container p-2 p-lg-5 main-container">
                 <Typography variant="h3" className="font-weight-bold p-5">
                     How to <span style={{color: "#85bc3c"}}>Start?</span>
                 </Typography>
                 <Grid container justifyContent="center">
                     {
-                        startData.map((data, i) => <Grid key={i} item xs md={4} className="p-2">
+                        startData.map((data, i) => <Grid key={i} item xs={12} md={4} className="p-2">
                             <Grid
                                 container direction="column" wrap="nowrap" alignItems="center" justifyContent={"center"}
                                 className="start-card-container card shadow text-center rounded-2"
@@ -297,11 +293,11 @@ const Home: NextPage = () => {
                     }
                 </Grid>
             </Grid>
-            <Grid container className=" main-container">
+            <Grid container className="main-container">
                 <Grid item xs={12} md={5}>
                     <img src="/faq.jpg" className="w-100"/>
                 </Grid>
-                <Grid item xs={12} md={7} container direction="column" className="p-5">
+                <Grid item xs={12} md={7} container direction="column" className="p-2 p-md-5">
                     <Typography variant="h3" className="font-weight-bold p-2">
                         Frequently <br/> Asked <span style={{color: "#85bc3c"}}>Questions</span>
                     </Typography>
@@ -374,18 +370,18 @@ const Home: NextPage = () => {
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid container alignItems="center" className="p-5 main-container">
-                <Grid item xs={12} md={3}>
-                    <Typography variant="h3" className="font-weight-bold p-2">
-                        What <br/> <span style={{color: "#99c928"}}>Peoples</span> Say
-                    </Typography>
-                    <Typography className="p-2">
-                        When is form 2290 due? Form 2290 is an annual tax paid to the Internal Revenue Service. For heavy vehicle with a taxable gross weight of 55,000 pounds or more.
-                    </Typography>
-                </Grid>
-            </Grid>
+            {/*<Grid container alignItems="center" className="p-2 p-md-5 main-container">*/}
+            {/*    <Grid item xs={12} md={3}>*/}
+            {/*        <Typography variant="h3" className="font-weight-bold p-2">*/}
+            {/*            What <br/> <span style={{color: "#99c928"}}>Peoples</span> Say*/}
+            {/*        </Typography>*/}
+            {/*        <Typography className="p-2">*/}
+            {/*            When is form 2290 due? Form 2290 is an annual tax paid to the Internal Revenue Service. For heavy vehicle with a taxable gross weight of 55,000 pounds or more.*/}
+            {/*        </Typography>*/}
+            {/*    </Grid>*/}
+            {/*</Grid>*/}
             <Grid container className="main-container">
-                <Grid item xs={12} md={6} container direction="column" className="p-5" style={{background: "#135882"}}>
+                <Grid item xs={12} md={6} container direction="column" className="p-2 p-md-5" style={{background: "#135882"}}>
                     <Typography variant="h3" className="font-weight-bold p-2 text-white">
                         Get <span style={{color: "#85bc3c"}}>In Touch</span>
                     </Typography>

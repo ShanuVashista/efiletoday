@@ -1,16 +1,16 @@
 import * as React from "react";
-import {Chip,
-    Grid,
-    Typography,
-    Button,
+import {Button,
     Card,
     CardContent,
-    TableContainer,
+    Chip,
+    Grid,
     Table,
+    TableBody,
+    TableCell,
+    TableContainer,
     TableHead,
     TableRow,
-    TableCell,
-    TableBody} from "@mui/material";
+    Typography} from "@mui/material";
 import Paper from "@mui/material/Paper";
 
 const FillingTable = () => {
@@ -22,7 +22,7 @@ const FillingTable = () => {
     }
 
     const columns: readonly Column[] = [
-        {
+        { 
             id: "reference",
             label: "Reference",
             minWidth: 170
@@ -151,7 +151,7 @@ const FillingTable = () => {
                         </Grid>
                     </Grid>
                 </Card>
-                <Card className="m-3 p-2 pb-lg-4">
+                <Card className="m-3">
                     <Grid container className="p-3" md sm xs>
                         <Grid
                             item xs={4} style={{backgroundColor: "white"}}
@@ -201,7 +201,7 @@ const FillingTable = () => {
                                 }
                             }
                         >
-                            <TableContainer sx={{maxHeight: 440}}>
+                            <TableContainer >
                                 <Table stickyHeader aria-label="sticky table">
                                     <TableHead>
                                         <TableRow>
@@ -220,27 +220,22 @@ const FillingTable = () => {
                                     </TableHead>
                                     <TableBody>
                                         {
-                                            rows
-                                                .map((row) => {
-                                                    return (
-                                                        <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
-                                                            {
-                                                                columns.map((column) => {
-                                                                    const value = row[column.id];
-                                                                    return (
-                                                                        <TableCell key={column.id} align={column.align}>
-                                                                            {
-                                                                                column.format && typeof value === "number"
-                                                                                    ? column.format(value)
-                                                                                    : value
-                                                                            }
-                                                                        </TableCell>
-                                                                    );
-                                                                })
-                                                            }
-                                                        </TableRow>
-                                                    );
-                                                })
+                                            rows.map((row:any) => {
+                                                return (
+                                                    <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
+                                                        {
+                                                            columns.map((column:any) => {
+                                                                const value = row[column.id];
+                                                                return (
+                                                                    <TableCell key={column.id} align={column.align}>
+                                                                        {column?.format && typeof value === "number" ? column?.format(value) : value}
+                                                                    </TableCell>
+                                                                );
+                                                            })
+                                                        }
+                                                    </TableRow>
+                                                );
+                                            })
                                         }
                                     </TableBody>
                                 </Table>
