@@ -21,6 +21,7 @@ const ForgotPassword = () => {
                                     required
                                     id="outlined-required"
                                     label="Enter Email ID"
+                                    size="small"
                                 />
                             </Grid>
                             <Grid item>

@@ -93,7 +93,7 @@ const Page1 = () => {
 
     return (
         <>
-            <Grid direction="column" container>
+            <Grid direction="column" container className="mt-5 mb-5">
                 <Box
                     className="p-2"
                     style={
@@ -106,7 +106,7 @@ const Page1 = () => {
                         }
                     }
                 >
-                    <Typography color="white">
+                    <Typography color="white" noWrap>
                         DASHBOARD | FILING LIST | BUSINESS LIST |
                         <BsFillPersonFill fill="white" />
                         <BiMenu fill="white" />
@@ -116,8 +116,8 @@ const Page1 = () => {
                     <Card>
                         <CardContent>
                             <Grid container justifyContent="center">
-                                <Grid item className="m-5">
-                                    <Typography>
+                                <Grid item className="m-3">
+                                    <Typography fontSize="small">
                                     Choose the ending month of your tax year: <BsQuestionCircleFill fill="#336FBF"/> In most cases, the tax year end month is December
                                     unless the IRS has given a special permission.
                                     </Typography>

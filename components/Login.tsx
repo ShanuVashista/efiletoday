@@ -22,6 +22,7 @@ const Login = () => {
                                     id="outlined-required"
                                     label="Email ID"
                                     style={{width: 350}}
+                                    size="small"
                                 />
                             </Grid>
                             <Grid item>
@@ -32,6 +33,7 @@ const Login = () => {
                                     id="outlined-required"
                                     label="Password"
                                     style={{width: 350}}
+                                    size="small"
                                 />
                             </Grid>
                             <Grid item>

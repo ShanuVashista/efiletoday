@@ -21,6 +21,7 @@ const ResetPassword = () => {
                                 required
                                 id="outlined-required"
                                 label="Enter New Password"
+                                size="small"
                             />
                         </Grid>
                         <Grid item className="mt-3">
@@ -31,6 +32,7 @@ const ResetPassword = () => {
                                 required
                                 id="outlined-required"
                                 label="Enter Confirm New Password"
+                                size="small"
                             />
                         </Grid>
                         <Grid item>

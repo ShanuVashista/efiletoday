@@ -30,7 +30,7 @@ const Dashboard = () => {
                             <Card>
                                 <Grid className="p-2" wrap="nowrap" justifyContent="center" container >
                                     <Grid item >
-                                        <Image src={card1} height={50} width={50}/>
+                                        <Image src={card1} height={500} width={500}/>
                                     </Grid>
                                     <Grid item className="p-3 pt-0 pb-0" >
                                         <Typography noWrap color="#0072BA">START YOUR <br/>E-FILE 2290</Typography>
@@ -53,7 +53,7 @@ const Dashboard = () => {
                             <Card>
                                 <Grid className="p-2" wrap="nowrap" justifyContent="center" container>
                                     <Grid item>
-                                        <Image src={card2} height={50} width={50}/>
+                                        <Image src={card2} height={500} width={500}/>
                                     </Grid>
                                     <Grid item className="p-3 pt-0 pb-0">
                                         <Typography noWrap color="#0072BA">MAKE AN AMENDMENT <br/>TO AN EXISTING FILE</Typography>

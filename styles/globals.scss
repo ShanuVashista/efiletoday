@@ -149,3 +149,17 @@ a {
 .banner-container{
   padding-top: 150px !important;
 }
+
+.text-style {
+  margin: auto 0;
+  text-align: right;
+  display: block;
+  @media screen and (max-width: 420px){
+    text-align: left;
+  }
+}
+.container-style  {
+  width: 100vw;
+  max-width: 1170px;
+}
+

@@ -22,6 +22,7 @@ const SignUp = () => {
                                         id="outlined-required"
                                         label="First Name"
                                         style={{width: 350}}
+                                        size="small"
                                     />
                                 </Grid>
                                 <Grid item className="mb-3">
@@ -31,6 +32,7 @@ const SignUp = () => {
                                         id="outlined-required"
                                         label="Last Name"
                                         style={{width: 350}}
+                                        size="small"
                                     />
                                 </Grid>
                             </Grid>
@@ -43,6 +45,7 @@ const SignUp = () => {
                                         id="outlined-required"
                                         label="Email ID"
                                         style={{width: 350}}
+                                        size="small"
                                     />
                                 </Grid>
                                 <Grid item className="mb-3">
@@ -53,6 +56,7 @@ const SignUp = () => {
                                         id="outlined-required"
                                         label="Phone Number"
                                         style={{width: 350}}
+                                        size="small"
                                     />
                                 </Grid>
                             </Grid>
@@ -65,6 +69,7 @@ const SignUp = () => {
                                         id="outlined-required"
                                         label="Password"
                                         style={{width: 350}}
+                                        size="small"
                                     />
                                 </Grid>
                                 <Grid item>
@@ -75,6 +80,7 @@ const SignUp = () => {
                                         id="outlined-required"
                                         label="Confirm Password"
                                         style={{width: 350}}
+                                        size="small"
                                     />
                                 </Grid>
                             </Grid>

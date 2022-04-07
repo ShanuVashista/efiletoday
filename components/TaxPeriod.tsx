@@ -60,24 +60,27 @@ const TaxPeriod = () => {
     return (
         <>
             <Grid
-                container className="p-2 p-md-5"
+                className="p-2 p-md-5 container-style"
             >
                 <Chip
                     label="TAX PERIOD" style={
                         {
                             position: "relative",
-                            margin: "auto",
+                            margin: "auto ",
                             top: 15,
                             background: "linear-gradient(90deg, #0072BA , #99c928 100%)",
                             borderRadius: 0,
                             color: "white",
-                            boxSizing: "border-box"
+                            boxSizing: "border-box",
+                            left: "50%",
+                            transform: "translate(-50%,0 )",
+                            zIndex: "999999999999",
                         }
                     }
                 />
                 <Grid
                     container direction="column" wrap="nowrap"
-                    className="start-card-container card shadow rounded-2 opacity-50"
+                    className="start-card-container card shadow rounded-2 opacity-50 p-3"
                 >
                     <Typography color="#1434A4" fontWeight="bold" style={{display: "inline-block"}}>
                         Select Tax Period
@@ -121,7 +124,7 @@ const TaxPeriod = () => {
                     </Typography>
                     <br/>
                     <Grid container wrap="nowrap">
-                        <Grid item xs={5}>
+                        <Grid item xs={12} lg={2}>
                             <Typography style={{display: "inline-block"}}>
                                 First used month
                                 <Typography color="#008000" fontWeight="bold" fontSize="large" style={{display: "inline-block"}}>
@@ -129,7 +132,7 @@ const TaxPeriod = () => {
                                 </Typography>
                             </Typography>
                         </Grid>
-                        <Grid item xs>
+                        <Grid item xs={12} lg={10}>
                             <Box
                                 sx={
                                     {
@@ -147,7 +150,7 @@ const TaxPeriod = () => {
                                     paperData.map((item, i) => {
                                         return (
                                             <Paper key={i} className="p-2" style={item.style}>
-                                                <Typography fontSize="small">
+                                                <Typography fontSize="small" color="white">
                                                     {item.data}
                                                 </Typography>
                                             </Paper>
@@ -208,14 +211,6 @@ const TaxPeriod = () => {
                     </Typography>
                 </Container>
             </Box>
-            <br/>
-            <Button
-                className="m-3" variant="contained" style={{backgroundColor: "#85Bc3c"}}
-            >Previous Step</Button>
-            <Button
-                className="m-3"
-                variant="contained" style={{backgroundColor: "#336FBF"}}
-            >Next Step</Button>
         </>
 
     );

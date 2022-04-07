@@ -9,7 +9,7 @@ import {Card,
 import {BsFillPersonFill} from "react-icons/bs";
 import {BiMenu} from "react-icons/bi";
 
-const Page2 = () => {
+const Page12 = () => {
     const selectOptions = [
         {label: "Test1"},
         {label: "Test2"}
@@ -62,7 +62,10 @@ const Page2 = () => {
                                     <Grid item xs={6}>
                                         <Autocomplete
                                             disablePortal
-                                            renderInput={(params) => <TextField {...params} label="Loss Event" />}
+                                            renderInput={
+                                                (params) =>
+                                                    <TextField {...params} label="Tax Overpayment Credits" />
+                                            }
                                             options={selectOptions}
                                             size="small"
                                         />
@@ -90,4 +93,4 @@ const Page2 = () => {
     );
 };
 
-export default Page2;
+export default Page12;
