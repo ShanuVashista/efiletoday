@@ -1,14 +1,5 @@
 import * as React from "react";
-import {Grid,
-    Typography,
-    Card,
-    CardContent,
-    TextField,
-    FormControl,
-    InputLabel,
-    Select,
-    Box,
-    Chip, Button, Autocomplete} from "@mui/material";
+import {Autocomplete, Button, Card, CardContent, Chip, Grid, TextField, Typography} from "@mui/material";
 import {BiInfoCircle} from "react-icons/bi";
 
 const Page3 = () => {

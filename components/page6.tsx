@@ -1,14 +1,14 @@
 import * as React from "react";
-import {Card,
+import {Autocomplete,
+    Button,
+    Card,
     CardContent,
-    Grid,
-    Select,
-    TextField,
-    Typography,
     Checkbox,
+    Grid,
     TextareaAutosize,
-    Button, Autocomplete} from "@mui/material";
-import {AiFillQuestionCircle, AiFillInfoCircle} from "react-icons/ai";
+    TextField,
+    Typography} from "@mui/material";
+import {AiFillInfoCircle, AiFillQuestionCircle} from "react-icons/ai";
 
 const Page6 = () => {
     const containerStyle = {
@@ -20,7 +20,7 @@ const Page6 = () => {
         {label: "Test1"},
         {label: "Test2"}
     ];
-
+ 
     return (
         <>
             <Grid container direction="column" justifyContent="center">
@@ -170,7 +170,7 @@ const Page6 = () => {
                                     <Grid container xs={12} lg={6} className="p-2">
                                         <Typography fontSize="small">
                                     Upload the relevant document of proof in one of the below-mentioned formats,in order
-                                    to avoid IRS rejections. For example: If your claim is 'Sold', submit the transaction
+                                    to avoid IRS rejections. For example: If your claim is Sold, submit the transaction
                                     paperwork as a proof.
                                         </Typography>
                                     </Grid>

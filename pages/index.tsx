@@ -370,16 +370,6 @@ const Home: NextPage = () => {
                     </Grid>
                 </Grid>
             </Grid>
-            {/*<Grid container alignItems="center" className="p-2 p-md-5 main-container">*/}
-            {/*    <Grid item xs={12} md={3}>*/}
-            {/*        <Typography variant="h3" className="font-weight-bold p-2">*/}
-            {/*            What <br/> <span style={{color: "#99c928"}}>Peoples</span> Say*/}
-            {/*        </Typography>*/}
-            {/*        <Typography className="p-2">*/}
-            {/*            When is form 2290 due? Form 2290 is an annual tax paid to the Internal Revenue Service. For heavy vehicle with a taxable gross weight of 55,000 pounds or more.*/}
-            {/*        </Typography>*/}
-            {/*    </Grid>*/}
-            {/*</Grid>*/}
             <Grid container className="main-container">
                 <Grid item xs={12} md={6} container direction="column" className="p-2 p-md-5" style={{background: "#135882"}}>
                     <Typography variant="h3" className="font-weight-bold p-2 text-white">

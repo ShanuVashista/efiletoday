@@ -1,13 +1,14 @@
 import * as React from "react";
-import {Card,
+import {Autocomplete,
+    Button,
+    Card,
     CardContent,
-    Grid,
-    TextField,
-    Typography,
     Checkbox,
+    Grid,
     TextareaAutosize,
-    Button, Autocomplete} from "@mui/material";
-import {AiFillQuestionCircle, AiFillInfoCircle} from "react-icons/ai";
+    TextField,
+    Typography} from "@mui/material";
+import {AiFillInfoCircle, AiFillQuestionCircle} from "react-icons/ai";
 import MenuBox from "./MenuBox";
 
 const Page7 = () => {
@@ -16,7 +17,7 @@ const Page7 = () => {
         maxWidth: 1170
     };
 
-    const selectOptions = [
+    const selectOptions = [ 
         {label: "Test1"},
         {label: "Test2"}
     ];
@@ -120,7 +121,7 @@ const Page7 = () => {
                                             <Typography color="#008000" fontSize="large" style={{display: "inline-block"}}>
                                                 *
                                             </Typography>
-                                            Taxable Gross Weight"
+                                            Taxable Gross Weight
                                         </Typography>
                                     </Grid>
                                     <Grid container xs={12} lg={3} className="p-2">
@@ -187,7 +188,7 @@ const Page7 = () => {
                                     <Grid container xs={12} lg={6} className="p-2">
                                         <Typography fontSize="small">
                                             Upload the relevant document of proof in one of the below-mentioned formats,in order
-                                            to avoid IRS rejections. For example: If your claim is 'Sold', submit the transaction
+                                            to avoid IRS rejections. For example: If your claim is Sold, submit the transaction
                                             paperwork as a proof.
                                         </Typography>
                                     </Grid>

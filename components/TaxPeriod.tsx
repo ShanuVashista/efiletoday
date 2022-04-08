@@ -1,8 +1,7 @@
-import {Grid, Typography, RadioGroup, FormControlLabel, Radio, Chip, Button, ButtonBase} from "@mui/material";
+import {ButtonBase, Chip, FormControlLabel, Grid, Radio, RadioGroup, Typography} from "@mui/material";
 import React from "react";
 import {BiInfoCircle} from "react-icons/bi";
 import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
 import Container from "@mui/material/Container";
 
 const TaxPeriod = () => {

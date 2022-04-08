@@ -1,8 +1,6 @@
 import * as React from "react";
 import TaxPeriod from "./TaxPeriod";
-import {Autocomplete, Box, Button, Card, CardContent, Checkbox, Grid, TextField, Typography} from "@mui/material";
-import {BsFillPersonFill} from "react-icons/bs";
-import {BiMenu} from "react-icons/bi";
+import {Box, Button, Card, CardContent, Checkbox, Grid, Typography} from "@mui/material";
 
 const Page13 = () => {
     return (

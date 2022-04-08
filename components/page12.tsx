@@ -1,13 +1,5 @@
 import * as React from "react";
-import {Card,
-    CardContent,
-    Grid,
-    Typography,
-    Box,
-    Button,
-    Autocomplete, TextField} from "@mui/material";
-import {BsFillPersonFill} from "react-icons/bs";
-import {BiMenu} from "react-icons/bi";
+import {Autocomplete, Button, Card, CardContent, Grid, TextField, Typography} from "@mui/material";
 import MenuBox from "./MenuBox";
 
 const Page12 = () => {

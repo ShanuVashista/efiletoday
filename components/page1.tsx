@@ -1,7 +1,6 @@
 import * as React from "react";
-import {Card, CardContent, Grid, Typography, Box, Button, ButtonBase} from "@mui/material";
-import {BsQuestionCircleFill, BsFillPersonFill} from "react-icons/bs";
-import {BiMenu} from "react-icons/bi";
+import {Button, ButtonBase, Card, CardContent, Grid, Typography} from "@mui/material";
+import {BsQuestionCircleFill} from "react-icons/bs";
 import MenuBox from "./MenuBox";
 
 const Page1 = () => {

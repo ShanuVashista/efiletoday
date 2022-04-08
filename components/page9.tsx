@@ -1,16 +1,6 @@
 import * as React from "react";
-import {Card,
-    CardContent,
-    Grid,
-    Select,
-    TextField,
-    Typography,
-    Checkbox,
-    TextareaAutosize,
-    Button, Box, Autocomplete} from "@mui/material";
-import {AiFillQuestionCircle, AiFillInfoCircle} from "react-icons/ai";
-import {BsFillPersonFill} from "react-icons/bs";
-import {BiMenu} from "react-icons/bi";
+import {Autocomplete, Button, Card, CardContent, Checkbox, Grid, TextField, Typography} from "@mui/material";
+import {AiFillInfoCircle, AiFillQuestionCircle} from "react-icons/ai";
 import MenuBox from "./MenuBox";
 
 const Page9 = () => {
@@ -108,7 +98,7 @@ const Page9 = () => {
                                             <Typography color="#008000" fontSize="large" style={{display: "inline-block"}}>
                                                 *
                                             </Typography>
-                                            Taxable Gross Weight"
+                                            Taxable Gross Weight
                                         </Typography>
                                     </Grid>
                                     <Grid container xs={12} lg={3} className="p-2">
@@ -154,7 +144,7 @@ const Page9 = () => {
                                     <Grid container xs={12} lg={6} className="p-2">
                                         <Typography fontSize="small">
                                             Upload the relevant document of proof in one of the below-mentioned formats,in order
-                                            to avoid IRS rejections. For example: If your claim is 'Sold', submit the transaction
+                                            to avoid IRS rejections. For example: If your claim is Sold, submit the transaction
                                             paperwork as a proof.
                                         </Typography>
                                     </Grid>
