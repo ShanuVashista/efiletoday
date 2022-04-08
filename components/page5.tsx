@@ -1,19 +1,7 @@
 import * as React from "react";
-import {Box, Button,
-    Card,
-    CardContent,
-    Chip,
-    Grid,
-    Typography} from "@mui/material";
+import {Button, Card, CardContent, Chip, Grid, Typography} from "@mui/material";
 
 const Page5 = () => {
-    const borderStyle = {
-        border: "2px solid #77C32B",
-        borderTop: "none",
-        borderRadius: 5,
-        textAlign: "center"
-    };
-
     const list1 = [
         {data: "Correct the VIN on any previously filed Form 2290"},
         {data: "Get the corrected schedule 1 in minutes"},
@@ -58,9 +46,18 @@ const Page5 = () => {
                                 </Typography>
                                 <Grid container direction="row" className="pt-3">
                                     <Grid xs container direction="column" className="p-3">
-                                        <Box style={borderStyle}>
+                                        <Grid
+                                            style={
+                                                {
+                                                    border: "2px solid #77C32B",
+                                                    borderTop: "none",
+                                                    borderRadius: 5,
+                                                    textAlign: "center"
+                                                }
+                                            }
+                                        >
                                             <Typography fontWeight="bold" fontSize="small" color="#2568BB">Form 2290 Vin Correction</Typography>
-                                        </Box>
+                                        </Grid>
                                         <Grid container className="p-2" justifyContent="center">
                                             <ul>
                                                 {
@@ -81,9 +78,18 @@ const Page5 = () => {
                                         </Grid>
                                     </Grid>
                                     <Grid xs container direction="column" className="p-3">
-                                        <Box style={borderStyle}>
+                                        <Grid
+                                            style={
+                                                {
+                                                    border: "2px solid #77C32B",
+                                                    borderTop: "none",
+                                                    borderRadius: 5,
+                                                    textAlign: "center"
+                                                }
+                                            }
+                                        >
                                             <Typography fontWeight="bold" fontSize="small" color="#2568BB">Taxable Gross Weight Increased</Typography>
-                                        </Box>
+                                        </Grid>
                                         <Grid container className="p-2" justifyContent="center">
                                             <ul>
                                                 {
@@ -104,9 +110,18 @@ const Page5 = () => {
                                         </Grid>
                                     </Grid>
                                     <Grid xs container direction="column" className="p-3">
-                                        <Box style={borderStyle}>
+                                        <Grid
+                                            style={
+                                                {
+                                                    border: "2px solid #77C32B",
+                                                    borderTop: "none",
+                                                    borderRadius: 5,
+                                                    textAlign: "center"
+                                                }
+                                            }
+                                        >
                                             <Typography fontWeight="bold" fontSize="small" color="#2568BB">Mileage Exceeded</Typography>
-                                        </Box>
+                                        </Grid>
                                         <Grid container className="p-2" justifyContent="center">
                                             <ul>
                                                 {
