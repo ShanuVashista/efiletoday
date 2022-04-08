@@ -2,15 +2,13 @@ import * as React from "react";
 import {Card,
     CardContent,
     Grid,
-    Select,
     TextField,
     Typography,
     Checkbox,
     TextareaAutosize,
-    Button, Box, Autocomplete} from "@mui/material";
+    Button, Autocomplete} from "@mui/material";
 import {AiFillQuestionCircle, AiFillInfoCircle} from "react-icons/ai";
-import {BsFillPersonFill} from "react-icons/bs";
-import {BiMenu} from "react-icons/bi";
+import MenuBox from "./MenuBox";
 
 const Page7 = () => {
     const containerStyle = {
@@ -27,24 +25,7 @@ const Page7 = () => {
         <>
             <Grid container direction="column" justifyContent="center">
                 <Grid item className="mb-5">
-                    <Box
-                        className="p-2"
-                        style={
-                            {
-                                background: "linear-gradient(90deg, #0072BA , #99c928 100%)",
-                                width: "fit-content",
-                                position: "relative",
-                                margin: "auto",
-                                top: 20
-                            }
-                        }
-                    >
-                        <Typography color="white" noWrap>
-                            DASHBOARD | FILING LIST | BUSINESS LIST |
-                            <BsFillPersonFill fill="white" />
-                            <BiMenu fill="white" />
-                        </Typography>
-                    </Box>
+                    <MenuBox/>
                 </Grid>
                 <Grid container justifyContent="center" className="p-2">
                     <Typography style={{textAlign: "center"}} color="#336FBF" fontWeight="bold" fontSize="large">

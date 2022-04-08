@@ -1,117 +1,29 @@
 import * as React from "react";
-import {Card, CardContent, Grid, Typography, Box, Button} from "@mui/material";
+import {Card, CardContent, Grid, Typography, Box, Button, ButtonBase} from "@mui/material";
 import {BsQuestionCircleFill, BsFillPersonFill} from "react-icons/bs";
 import {BiMenu} from "react-icons/bi";
+import MenuBox from "./MenuBox";
 
 const Page1 = () => {
     const boxData = [
-        {
-            data: "July",
-            style: {
-                backgroundColor: "#99C928",
-                borderRadius: 5
-            }
-        },
-        {
-            data: "Aug",
-            style: {
-                backgroundColor: "#336FBF",
-                borderRadius: 5
-            }
-        },
-        {
-            data: "Sep",
-            style: {
-                backgroundColor: "#336FBF",
-                borderRadius: 5
-            }
-        },
-        {
-            data: "Oct",
-            style: {
-                backgroundColor: "#336FBF",
-                borderRadius: 5
-            }
-        },
-        {
-            data: "Nov",
-            style: {
-                backgroundColor: "#336FBF",
-                borderRadius: 5
-            }
-        },
-        {
-            data: "Dec",
-            style: {
-                backgroundColor: "#336FBF",
-                borderRadius: 5
-            }
-        },
-        {
-            data: "Jan",
-            style: {
-                backgroundColor: "#336FBF",
-                borderRadius: 5
-            }
-        },
-        {
-            data: "Feb",
-            style: {
-                backgroundColor: "#336FBF",
-                borderRadius: 5
-            }
-        },
-        {
-            data: "Mar",
-            style: {
-                backgroundColor: "#336FBF",
-                borderRadius: 5
-            }
-        },
-        {
-            data: "Apr",
-            style: {
-                backgroundColor: "#336FBF",
-                borderRadius: 5
-            }
-        },
-        {
-            data: "May",
-            style: {
-                backgroundColor: "#336FBF",
-                borderRadius: 5
-            }
-        },
-        {
-            data: "Jun",
-            style: {
-                backgroundColor: "#336FBF",
-                borderRadius: 5
-            }
-        },
+        {data: "July"},
+        {data: "Aug"},
+        {data: "Sep"},
+        {data: "Oct"},
+        {data: "Nov"},
+        {data: "Dec"},
+        {data: "Jan"},
+        {data: "Feb"},
+        {data: "Mar"},
+        {data: "Apr"},
+        {data: "May"},
+        {data: "Jun"},
     ];
 
     return (
         <>
             <Grid direction="column" container className="mt-5 mb-5">
-                <Box
-                    className="p-2"
-                    style={
-                        {
-                            background: "linear-gradient(90deg, #0072BA , #99c928 100%)",
-                            width: "fit-content",
-                            position: "relative",
-                            margin: "auto",
-                            top: 20
-                        }
-                    }
-                >
-                    <Typography color="white" noWrap>
-                        DASHBOARD | FILING LIST | BUSINESS LIST |
-                        <BsFillPersonFill fill="white" />
-                        <BiMenu fill="white" />
-                    </Typography>
-                </Box>
+                <MenuBox/>
                 <Grid item>
                     <Card>
                         <CardContent>
@@ -127,12 +39,13 @@ const Page1 = () => {
                                         boxData.map((item, key) => {
                                             return (
                                                 <Grid item key={key} className="p-2">
-                                                    <Box
-                                                        className="p-2"
-                                                        style={item.style}
+                                                    <Grid
+                                                        className="p-2 dabutton"
+                                                        style={{borderRadius: 5}}
+                                                        component={ButtonBase}
                                                     >
                                                         <Typography color="white">{item.data}</Typography>
-                                                    </Box>
+                                                    </Grid>
                                                 </Grid>
                                             );
                                         })

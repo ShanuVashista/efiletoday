@@ -8,6 +8,7 @@ import {Card,
     Autocomplete, TextField} from "@mui/material";
 import {BsFillPersonFill} from "react-icons/bs";
 import {BiMenu} from "react-icons/bi";
+import MenuBox from "./MenuBox";
 
 const Page12 = () => {
     const selectOptions = [
@@ -18,24 +19,7 @@ const Page12 = () => {
     return(
         <>
             <Grid direction="column" container className="mt-5 mb-5">
-                <Box
-                    className="p-2"
-                    style={
-                        {
-                            background: "linear-gradient(90deg, #0072BA , #99c928 100%)",
-                            width: "fit-content",
-                            position: "relative",
-                            margin: "auto",
-                            top: 20
-                        }
-                    }
-                >
-                    <Typography color="white" noWrap>
-                        DASHBOARD | FILING LIST | BUSINESS LIST |
-                        <BsFillPersonFill fill="white" />
-                        <BiMenu fill="white" />
-                    </Typography>
-                </Box>
+                <MenuBox/>
                 <Grid item>
                     <Card>
                         <CardContent>

@@ -1,4 +1,4 @@
-import {Grid, Typography, RadioGroup, FormControlLabel, Radio, Chip, Button} from "@mui/material";
+import {Grid, Typography, RadioGroup, FormControlLabel, Radio, Chip, Button, ButtonBase} from "@mui/material";
 import React from "react";
 import {BiInfoCircle} from "react-icons/bi";
 import Box from "@mui/material/Box";
@@ -7,54 +7,18 @@ import Container from "@mui/material/Container";
 
 const TaxPeriod = () => {
     const paperData = [
-        {
-            data: "July 2021",
-            style: {backgroundColor: "green"},
-        },
-        {
-            data: "Aug 2021",
-            style: {backgroundColor: "blue"},
-        },
-        {
-            data: "Sept 2021",
-            style: {backgroundColor: "blue"},
-        },
-        {
-            data: "Oct 2021",
-            style: {backgroundColor: "blue"},
-        },
-        {
-            data: "Nov 2021",
-            style: {backgroundColor: "blue"},
-        },
-        {
-            data: "Dec 2021",
-            style: {backgroundColor: "blue"},
-        },
-        {
-            data: "Jan 2022",
-            style: {backgroundColor: "blue"},
-        },
-        {
-            data: "Feb 2022",
-            style: {backgroundColor: "blue"},
-        },
-        {
-            data: "Mar 2022",
-            style: {backgroundColor: "blue"},
-        },
-        {
-            data: "Apr 2022",
-            style: {backgroundColor: "blue"},
-        },
-        {
-            data: "May 2022",
-            style: {backgroundColor: "blue"},
-        },
-        {
-            data: "Jun 2022",
-            style: {backgroundColor: "blue"},
-        },
+        {data: "July 2021"},
+        {data: "Aug 2021"},
+        {data: "Sept 2021"},
+        {data: "Oct 2021"},
+        {data: "Nov 2021"},
+        {data: "Dec 2021"},
+        {data: "Jan 2022"},
+        {data: "Feb 2022"},
+        {data: "Mar 2022"},
+        {data: "Apr 2022"},
+        {data: "May 2022"},
+        {data: "Jun 2022"},
     ];
 
     return (
@@ -149,11 +113,11 @@ const TaxPeriod = () => {
                                 {
                                     paperData.map((item, i) => {
                                         return (
-                                            <Paper key={i} className="p-2" style={item.style}>
+                                            <Grid component={ButtonBase} key={i} className="p-2 dabutton" style={{borderRadius: 5}}>
                                                 <Typography fontSize="small" color="white">
                                                     {item.data}
                                                 </Typography>
-                                            </Paper>
+                                            </Grid>
                                         );
                                     })
                                 }
