@@ -169,12 +169,12 @@ a {
 
 .hidden-mdUp-container{
   @media screen and (max-width: 766px) {
-    display: none;
+    display: none !important;
   }
 }
 .hidden-mdDown-container{
   @media screen and (min-width: 767px) {
-    display: none;
+    display: none !important;
   }
 }
 
