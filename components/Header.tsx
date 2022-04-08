@@ -9,7 +9,7 @@ import {AiOutlineInstagram, AiOutlineTwitter} from "react-icons/ai";
 import {FaFacebookF} from "react-icons/fa";
 import {RiLinkedinFill} from "react-icons/ri";
 
-const Header = () => {
+const Header = (): JSX.Element => {
     const [show, setShow] = useState(false);
 
     const links = [
