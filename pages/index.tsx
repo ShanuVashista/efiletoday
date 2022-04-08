@@ -152,7 +152,7 @@ const Home: NextPage = () => {
                     </Typography>
                     <Grid container wrap="nowrap">
                         <Grid className="p-2">
-                            <img src="/irs.png" style={{width: 70}}/>
+                            <img src="/IRS.png" style={{width: 70}}/>
                         </Grid>
                         <Grid container alignItems="center" className="p-2">
                             <img src="/call.png" style={{width: 50}}/>
