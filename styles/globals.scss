@@ -156,9 +156,10 @@ a {
 .text-style {
   margin: auto 0;
   text-align: right;
-  display: block;
+  justify-content: flex-end;
   @media screen and (max-width: 420px){
     text-align: left;
+    justify-content: flex-start;
   }
 }
 .container-style  {
