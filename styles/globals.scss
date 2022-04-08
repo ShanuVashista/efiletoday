@@ -176,11 +176,11 @@ a {
     display: none;
   }
 }
-.dabutton:focus {
-  background-color: #99C928;
-}
 
 .dabutton {
-  background-color: #336FBF;
-}
+  background-color: #336FBF !important;
 
+  &:focus {
+    background-color: #99C928 !important;
+  }
+}

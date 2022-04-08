@@ -34,7 +34,7 @@ const Page6 = () => {
                         <CardContent>
                             <Grid container direction="column" className="p-2">
                                 <Grid container direction="row" className="p-2">
-                                    <Grid container xs={12} lg={6} className="text-style p-2">
+                                    <Grid container justifyContent="flex-end" xs={12} lg={6} className="text-style p-2">
                                         <Typography fontWeight="bold" noWrap>Loss Event:</Typography>
                                     </Grid>
                                     <Grid container xs={12} lg={3} className="p-2">
@@ -45,7 +45,7 @@ const Page6 = () => {
                                     </Grid>
                                 </Grid>
                                 <Grid container direction="row" className="p-2">
-                                    <Grid container xs={12} lg={6} className="text-style p-2">
+                                    <Grid container justifyContent="flex-end" xs={12} lg={6} className="text-style p-2">
                                         <Typography fontWeight="bold" style={{display: "inline-block"}}>
                                             <Typography color="#008000" fontSize="large" style={{display: "inline-block"}}>
                                         *
@@ -73,7 +73,7 @@ const Page6 = () => {
                                     </Grid>
                                 </Grid>
                                 <Grid container direction="row" className="p-2">
-                                    <Grid container xs={12} lg={6} className="text-style p-2">
+                                    <Grid justifyContent="flex-end" container xs={12} lg={6} className="text-style p-2">
                                         <Typography fontWeight="bold" style={{display: "inline-block"}}>
                                             <Typography color="#008000" fontSize="large" style={{display: "inline-block"}}>
                                         *
@@ -89,7 +89,7 @@ const Page6 = () => {
                                     </Grid>
                                 </Grid>
                                 <Grid container direction="row" className="p-2">
-                                    <Grid container xs={12} lg={6} className="text-style p-2">
+                                    <Grid container justifyContent="flex-end" xs={12} lg={6} className="text-style p-2">
                                         <Typography fontWeight="bold" style={{display: "inline-block"}}>
                                             <Typography color="#008000" fontSize="large" style={{display: "inline-block"}}>
                                         *
@@ -124,7 +124,7 @@ const Page6 = () => {
                                     </Grid>
                                 </Grid>
                                 <Grid container direction="row" className="p-2">
-                                    <Grid container xs={12} lg={6} className="text-style p-2">
+                                    <Grid justifyContent="flex-end" container xs={12} lg={6} className="text-style p-2">
                                         <Typography fontWeight="bold" style={{display: "inline-block"}}>
                                             <Typography color="#008000" fontSize="large" style={{display: "inline-block"}}>
                                         *
@@ -145,7 +145,7 @@ const Page6 = () => {
                                     </Grid>
                                 </Grid>
                                 <Grid container direction="row" className="p-2">
-                                    <Grid container xs={12} lg={6} className="text-style p-2">
+                                    <Grid justifyContent="flex-end" container xs={12} lg={6} className="text-style p-2">
                                         <Typography fontWeight="bold" style={{display: "inline-block"}}>
                                             <Typography color="#008000" fontSize="large" style={{display: "inline-block"}}>
                                         *
@@ -166,7 +166,7 @@ const Page6 = () => {
                                         </Typography>
                                     </Grid>
                                 </Grid>
-                                <Grid container justifyContent="right" direction="row">
+                                <Grid justifyContent="flex-end" container direction="row">
                                     <Grid container xs={12} lg={6} className="p-2">
                                         <Typography fontSize="small">
                                     Upload the relevant document of proof in one of the below-mentioned formats,in order
