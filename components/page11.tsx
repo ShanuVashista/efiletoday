@@ -72,7 +72,7 @@ const Page11 = () => {
     return (
         <Grid container justifyContent="center">
             <Grid item xs={12} md={10} container direction="column">
-                <Grid style={containerStyle} container justifyContent="right" className="m-2">
+                <Grid container justifyContent="right" className="m-2">
                     <Typography className="text-style" fontSize="small">Print this page</Typography>
                     <Button><FcPrint fontSize="xx-large"/></Button>
                 </Grid>
@@ -103,7 +103,7 @@ const Page11 = () => {
                     </Box>
                 </Grid>
                 <Grid item className="m-2">
-                    <Box style={containerStyle}>
+                    <Box>
                         <Grid
                             container direction="column" wrap="nowrap" style={
                                 {
@@ -143,7 +143,7 @@ const Page11 = () => {
                     </Box>
                 </Grid>
                 <Grid item className="m-2">
-                    <Box style={containerStyle}>
+                    <Box>
                         <Grid
                             container direction="column" wrap="nowrap" style={
                                 {
@@ -210,7 +210,7 @@ const Page11 = () => {
                     </Box>
                 </Grid>
                 <Grid item className="m-2">
-                    <Box style={containerStyle}>
+                    <Box>
                         <Grid
                             container direction="column" wrap="nowrap" style={
                                 {
@@ -273,7 +273,7 @@ const Page11 = () => {
 
                                 </Grid>
                                 <Grid item className="m-2">
-                                    <Box style={containerStyle}>
+                                    <Box>
                                         <Grid
                                             container direction="column" wrap="nowrap" style={
                                                 {
