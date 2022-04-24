@@ -1,4 +1,4 @@
-import {ButtonBase, Chip, FormControlLabel, Grid, Radio, RadioGroup, Typography} from "@mui/material";
+import {Button, ButtonBase, Chip, FormControlLabel, Grid, Radio, RadioGroup, Typography} from "@mui/material";
 import React from "react";
 import {BiInfoCircle} from "react-icons/bi";
 import Box from "@mui/material/Box";
@@ -43,7 +43,7 @@ const TaxPeriod = () => {
                 />
                 <Grid
                     container direction="column" wrap="nowrap"
-                    className="start-card-container card shadow rounded-2 opacity-50 p-3"
+                    className="start-card-container card shadow rounded-2 opacity-75 p-3"
                 >
                     <Typography color="#1434A4" fontWeight="bold" style={{display: "inline-block"}}>
                         Select Tax Period
@@ -174,6 +174,14 @@ const TaxPeriod = () => {
                     </Typography>
                 </Container>
             </Box>
+            <Grid container wrap="nowrap" justifyContent="center">
+                <Button
+                    className="m-2" variant="contained" style={{backgroundColor: "#85Bc3c"}}
+                >Previous Step</Button>
+                <Button
+                    className="m-2" variant="contained" style={{backgroundColor: "#336FBF"}}
+                >Next Step</Button>
+            </Grid>
         </>
 
     );

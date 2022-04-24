@@ -21,8 +21,8 @@ const Page5 = () => {
     ];
 
     return (
-        <>
-            <Grid container direction="column">
+        <Grid container justifyContent="center">
+            <Grid item xs={12} md={10} container direction="column">
                 <Chip
                     label="2290 AMENDMENT" style={
                         {
@@ -150,7 +150,7 @@ const Page5 = () => {
                     </CardContent>
                 </Card>
             </Grid>
-        </>
+        </Grid>
     );
 };
 

@@ -1,10 +1,10 @@
 import * as React from "react";
-import Background from "../components/Background";
+import UserContentContainer from "../components/UserContentContainer";
 import FillingTable from "../components/FillingTable";
 
 const FillingActivity = () => {
     return (
-        <Background component={<FillingTable/>} />
+        <UserContentContainer component={<FillingTable/>} />
     );
 };
 

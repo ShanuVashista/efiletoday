@@ -3,11 +3,6 @@ import {Box, Button, Checkbox, Grid, Typography} from "@mui/material";
 import {FcPrint} from "react-icons/fc";
 
 const Page11 = () => {
-    const containerStyle = {
-        width: "100vw",
-        maxWidth: 1170
-    };
-
     const box2Data1 = [
         {
             col1: "Filing Type",
@@ -75,14 +70,14 @@ const Page11 = () => {
     ];
 
     return (
-        <>
-            <Grid container direction="column">
+        <Grid container justifyContent="center">
+            <Grid item xs={12} md={10} container direction="column">
                 <Grid style={containerStyle} container justifyContent="right" className="m-2">
                     <Typography className="text-style" fontSize="small">Print this page</Typography>
                     <Button><FcPrint fontSize="xx-large"/></Button>
                 </Grid>
                 <Grid item className="m-2">
-                    <Box style={containerStyle}>
+                    <Box>
                         <Grid
                             container direction="row" wrap="nowrap" style={
                                 {
@@ -322,7 +317,7 @@ const Page11 = () => {
                     </Box>
                 </Grid>
             </Grid>
-        </>
+        </Grid>
     );
 };
 

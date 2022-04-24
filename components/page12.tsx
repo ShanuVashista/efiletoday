@@ -9,8 +9,8 @@ const Page12 = () => {
     ];
 
     return(
-        <>
-            <Grid direction="column" container className="mt-5 mb-5">
+        <Grid container justifyContent="center">
+            <Grid item xs={12} md={10} direction="column" container className="mt-5 mb-5">
                 <MenuBox/>
                 <Grid item>
                     <Card>
@@ -65,7 +65,7 @@ const Page12 = () => {
                     </Button>
                 </Grid>
             </Grid>
-        </>
+        </Grid>
     );
 };
 

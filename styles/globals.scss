@@ -30,7 +30,7 @@ a {
   }
 }
 
-.header-link{
+.header-link {
   color: #ffffff !important;
   @media screen and (min-width: 1023px) {
     font-size: 12px !important;
@@ -59,6 +59,10 @@ a {
   font-weight: bold;
 }
 
+.font-weight-semi-bold {
+  font-weight: 600;
+}
+
 .overlay-container {
   top: 0;
   left: 0;
@@ -68,18 +72,19 @@ a {
   position: absolute;
 
 }
-  .overlay-form {
-    input {
-      background: white;
-    }
 
-    fieldset {
-      border: none !important;
-    }
+.overlay-form {
+  input {
+    background: white;
   }
 
+  fieldset {
+    border: none !important;
+  }
+}
+
 .start-container {
-  padding-bottom:  80px !important;
+  padding-bottom: 80px !important;
   background: url("/how-to-start.jpg") no-repeat;
   background-size: cover;
 }
@@ -87,7 +92,7 @@ a {
 .start-card-container {
   background: white;
   min-height: 300px;
-  @media screen and (min-width: 1023px){
+  @media screen and (min-width: 1023px) {
     padding: 50px;
     min-height: 350px;
   }
@@ -102,10 +107,17 @@ a {
   fieldset {
     border: none !important;
   }
-  &.with-white{
+
+  &.with-white {
     input, textarea {
       color: #0072BA;
       background: white;
+    }
+  }
+
+  &.with-contact {
+    input, textarea {
+      color: #121212
     }
   }
 }
@@ -119,9 +131,7 @@ a {
   }
 }
 
-.advantage-container{
-  background: url("/cta.jpg") no-repeat;
-  background-size: cover;
+.advantage-container {
   .with-cta {
     padding: 50px 80px;
     background: rgba(0, 0, 0, .25);
@@ -137,7 +147,7 @@ a {
   }
 }
 
-.footer-container{
+.footer-container {
   background: url("/footer.png") no-repeat;
   background-position: right top;
   background-size: 340px;
@@ -149,7 +159,7 @@ a {
   }
 }
 
-.banner-container{
+.banner-container {
   padding-top: 150px !important;
 }
 
@@ -157,22 +167,24 @@ a {
   margin: auto 0;
   text-align: right;
   justify-content: flex-end;
-  @media screen and (max-width: 420px){
+  @media screen and (max-width: 420px) {
     text-align: left;
     justify-content: flex-start;
   }
 }
-.container-style  {
+
+.container-style {
   width: 100vw;
   max-width: 1170px;
 }
 
-.hidden-mdUp-container{
+.hidden-mdUp-container {
   @media screen and (max-width: 766px) {
     display: none !important;
   }
 }
-.hidden-mdDown-container{
+
+.hidden-mdDown-container {
   @media screen and (min-width: 767px) {
     display: none !important;
   }
@@ -184,4 +196,33 @@ a {
   &:focus {
     background-color: #99C928 !important;
   }
+}
+
+.refund-policy-container{
+  position: relative;
+  .refund-policy-content-container{
+    top: 0;
+    left: auto;
+    position: absolute;
+  }
+}
+
+.pricing-banner-container{
+  padding-top: 0 !important;
+  padding-bottom: 0px !important;
+  .pricing-container{
+    top: -120px;
+    position: relative;
+  }
+  .pricing-tag{
+    top: -55px;
+    left: 520px;
+    width: 250px;
+    z-index: 1;
+    position: relative;
+  }
+}
+
+.pb-0{
+  padding-bottom: 0 !important;
 }

@@ -1,4 +1,4 @@
-import {CardContent, Grid, Typography, Card, TextField, Button} from "@mui/material";
+import {Button, Card, CardContent, Grid, TextField, Typography} from "@mui/material";
 import * as React from "react";
 import Link from "next/link";
 
@@ -39,6 +39,7 @@ const Login = () => {
                             <Grid item>
                                 <Button
                                     variant="contained" style={{backgroundColor: "#99c928"}}
+                                    href="/user/dashboard"
                                 >Login</Button>
                                 <Link href="/signup">
                                     <Button

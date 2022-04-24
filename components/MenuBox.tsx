@@ -19,7 +19,7 @@ const MenuBox = () => {
         >
             <Typography color="white" noWrap>
                 <Grid container direction="row">
-                    <Grid component={ButtonBase}>DASHBOARD</Grid>
+                    <Grid component={"a"} href="/user/dashboard">DASHBOARD</Grid>
                     <Grid component={ButtonBase}>| FILING LIST |</Grid>
                     <Grid component={ButtonBase}> BUSINESS LIST |</Grid>
                     <Grid component={ButtonBase}>

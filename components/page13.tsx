@@ -1,12 +1,10 @@
 import * as React from "react";
-import TaxPeriod from "./TaxPeriod";
 import {Box, Button, Card, CardContent, Checkbox, Grid, Typography} from "@mui/material";
 
 const Page13 = () => {
     return (
-        <>
-            <TaxPeriod/>
-            <Grid direction="column" container className="mt-5 mb-5">
+        <Grid container justifyContent="center">
+            <Grid item xs={12} md={10} direction="column" container className="mt-5 mb-5">
                 <Box
                     className="p-2"
                     style={
@@ -94,7 +92,7 @@ const Page13 = () => {
                     </Button>
                 </Grid>
             </Grid>
-        </>
+        </Grid>
     );
 };
 

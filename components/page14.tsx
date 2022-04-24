@@ -1,10 +1,15 @@
 import * as React from "react";
-import {Card,
+import {Autocomplete,
+    Button,
+    Card,
     CardContent,
+    Chip,
+    FormControlLabel,
     Grid,
-    Typography,
+    Radio,
+    RadioGroup,
     TextField,
-    FormControlLabel, Radio, RadioGroup, Button, Chip, Autocomplete} from "@mui/material";
+    Typography} from "@mui/material";
 import {BiInfoCircle} from "react-icons/bi";
 import {BsThreeDots} from "react-icons/bs";
 
@@ -15,8 +20,8 @@ const Page14 = () => {
     ];
     
     return (
-        <>
-            <Grid container direction="column">
+        <Grid container justifyContent="center">
+            <Grid item xs={12} md={10} container direction="column">
                 <Chip
                     label="MILEAGE EXCEEDED VEHICLES" style={
                         {
@@ -117,7 +122,7 @@ const Page14 = () => {
                     </CardContent>
                 </Card>
             </Grid>
-        </>
+        </Grid>
     );
 };
 

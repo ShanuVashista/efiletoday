@@ -9,8 +9,8 @@ const Page3 = () => {
     ];
 
     return (
-        <>
-            <Grid container direction="column" justifyContent="center">
+        <Grid container justifyContent="center">
+            <Grid item xs={12} md={10} container direction="column" justifyContent="center">
                 <Grid item className="p-2">
                     <Grid container justifyContent="center" style={{width: "100%"}}>
                         <Chip
@@ -69,7 +69,7 @@ const Page3 = () => {
                     >Next Step</Button>
                 </Grid>
             </Grid>
-        </>
+        </Grid>
     );
 };
 

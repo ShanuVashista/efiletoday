@@ -19,23 +19,23 @@ const Header = () => {
         },
         {
             label: "File",
-            href: ""
+            href: "file"
         },
         {
             label: "Pay",
-            href: ""
+            href: "/pay"
         },
         {
             label: "Refunds",
-            href: ""
+            href: "/refund"
         },
         {
             label: "Forms & Instructions",
-            href: ""
+            href: "/form-instructions"
         },
         {
             label: "Contact",
-            href: ""
+            href: "/contact"
         },
     ];
 
@@ -60,7 +60,7 @@ const Header = () => {
 
     const content = <>{
         links.map((link, i) => <Grid key={i} className="p-1 p-lg-2 w-auto">
-            <Button size="small" className="header-link">
+            <Button href={link.href} size="small" className="header-link">
                 {link.label}
             </Button>
         </Grid>)
@@ -127,7 +127,6 @@ const Header = () => {
                                 {icon.icon}
                             </Grid>
                         </Grid>)
-                        
                     }
                     <Grid className="p-1 hidden-mdDown-container">
                         <IconButton

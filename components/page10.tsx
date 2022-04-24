@@ -15,24 +15,19 @@ import {AiFillInfoCircle, AiFillQuestionCircle} from "react-icons/ai";
 import MenuBox from "./MenuBox";
 
 const Page10 = () => {
-    const containerStyle = {
-        width: "100vw", 
-        maxWidth: 1170
-    };
-
     const selectOptions = [
         {label: "Test1"},
         {label: "Test2"}
     ];
 
     return (
-        <>
-            <Grid container direction="column" justifyContent="center">
+        <Grid container justifyContent="center">
+            <Grid item xs={12} md={10} container direction="column" justifyContent="center">
                 <Grid item className="mb-5">
                     <MenuBox/>
                 </Grid>
                 <Grid item>
-                    <Card style={containerStyle}>
+                    <Card>
                         <CardContent>
                             <Grid container justifyContent="center" className="p-2">
                                 <Typography style={{textAlign: "center"}} color="#336FBF" fontWeight="bold" fontSize="large">
@@ -293,7 +288,7 @@ const Page10 = () => {
                     </Grid>
                 </Grid>
             </Grid>
-        </>
+        </Grid>
     );
 };
 

@@ -1,17 +1,17 @@
 import * as React from "react";
-import {CardContent,
-    Chip,
-    Grid,
-    Typography,
-    Card,
+import {Box,
     Button,
-    Select,
-    InputLabel,
+    Card,
+    CardContent,
+    Chip,
     FormControl,
-    Box,
-    FormControlLabel, Radio, RadioGroup} from "@mui/material";
-import Image from "next/image";
-import truck from "../public/small-truck.png";
+    FormControlLabel,
+    Grid,
+    InputLabel,
+    Radio,
+    RadioGroup,
+    Select,
+    Typography} from "@mui/material";
 import {BsThreeDots} from "react-icons/bs";
 import {AiFillInfoCircle} from "react-icons/ai";
 
@@ -19,14 +19,10 @@ const Truck = () => {
     return(
         <>
             <Grid container direction="column">
-                <Grid
-                    item className="m-auto"
-                >
-                    <Image src={truck} height={100} width={70}/>
+                <Grid item className="m-auto">
+                    <img src="/truck-icon.png" style={{width: 50}}/>
                 </Grid>
-                <Grid
-                    item className="m-auto"
-                >
+                <Grid item className="m-auto">
                     <Chip
                         label="SINGLE TRUCK" style={
                             {
