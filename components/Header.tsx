@@ -19,7 +19,7 @@ const Header = () => {
         },
         {
             label: "File",
-            href: "file"
+            href: "/file"
         },
         {
             label: "Pay",
