@@ -5,35 +5,60 @@ import {BsSpeedometer2, BsTruck} from "react-icons/bs";
 import {IoPersonOutline} from "react-icons/io5";
 import {AiOutlinePullRequest, AiOutlineTransaction} from "react-icons/ai";
 import {BiBookContent} from "react-icons/bi";
+import {useRouter} from "next/router";
 
 const AdminLayout = ({component}: any) => {
+    const router = useRouter();
+
     const links = [
         {
             label: "Dashboard",
+            link: "/admin/dashboard",
             icon: <BsSpeedometer2 fill="#99C928"/>
         },
         {
-            label: "Categories",
+            label: "Customers",
+            link: "/admin/customers",
             icon: <IoPersonOutline fill="#99C928"/>
         },
         {
-            label: "Users",
+            label: "Businesses",
+            link: "/admin/businesses",
             icon: <IoPersonOutline fill="#99C928"/>
         },
         {
-            label: "Requests",
+            label: "Transactions History",
+            link: "/admin/transactions",
             icon: <AiOutlinePullRequest fill="#99C928"/>
         },
         {
-            label: "Trucks",
+            label: "E Filed Applications",
+            link: "/admin/efile-applications",
             icon: <BsTruck fill="#99C928"/>
         },
         {
-            label: "Transactions",
+            label: "Data Control Applications",
+            link: "",
             icon: <AiOutlineTransaction fill="#99C928"/>
         },
         {
-            label: "CMS Content",
+            label: "Enquiries",
+            link: "/admin/enquires",
+            icon: <AiOutlineTransaction fill="#99C928"/>
+        },
+        {
+            label: "CMS",
+            link: "",
+            icon: <BiBookContent fill="#99C928"/>
+        },
+        {
+            label: "Audit Logs",
+            link: "/admin/logs",
+            icon: <BiBookContent fill="#99C928"/>
+        },
+        {
+            label: "Settings",
+            link: "",
             icon: <BiBookContent fill="#99C928"/>
         },
     ];
@@ -58,7 +83,7 @@ const AdminLayout = ({component}: any) => {
             <List className="p-0">
                 {
                     links.map((item) => (
-                        <ListItem button key={item.label}>
+                        <ListItem button key={item.label} onClick={() => router.push(item.link)}>
                             <Typography variant="subtitle2" className="p-2">
                                 {item.label}
                             </Typography>

@@ -1,10 +1,15 @@
 import * as React from "react";
-import AdminDashboard from "../../components/AdminDashboard";
+import AdminLayout from "../../components/AdminLayout";
+import {Grid} from "@mui/material";
 
 const dashboard = () => {
-    return (
-        <AdminDashboard/>
-    );
+    return <AdminLayout
+        component={
+            <Grid container direction="row">
+
+            </Grid>
+        }
+    />;
 };
 
 export default dashboard; 
