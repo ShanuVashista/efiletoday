@@ -1,8 +1,7 @@
+import * as React from "react";
 import "../styles/globals.scss";
-import type {AppProps} from "next/app";
 
-function MyApp ({Component, pageProps}: AppProps){
-    // eslint-disable-next-line react/react-in-jsx-scope
+function MyApp ({Component, pageProps}: any){
     return <Component {...pageProps} />;
 }
 
